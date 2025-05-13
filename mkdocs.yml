@@ -1,0 +1,4 @@
+site_name: rosplat
+site_url: https://rosplat.github.io/rosplat-docs/
+theme:
+  name: material
