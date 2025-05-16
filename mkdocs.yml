@@ -11,7 +11,23 @@ theme:
     - content.code.copy
     - content.code.select
     - content.code.annotate
+ 
+  palette:
 
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+        
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -40,6 +56,26 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+plugins:
+  - print-site:
+      add_to_navigation: false
+      print_page_title: 'Print Site'
+      print_page_basename: 'print_page'
+      add_print_site_banner: false
+      # Table of contents
+      add_table_of_contents: true
+      toc_title: 'Table of Contents'
+      toc_depth: 6
+      # Content-related
+      add_full_urls: false
+      enumerate_headings: true
+      enumerate_figures: true
+      add_cover_page: true
+      cover_page_template: ""
+      path_to_pdf: ""
+      include_css: true
+      enabled: true
+      exclude:
  
 
 
