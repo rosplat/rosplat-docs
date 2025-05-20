@@ -9,13 +9,12 @@ theme:
   copyright: © 2025 ООО «Р-Платформа»
   font:
     text: false
-  features:   
+  features:
     - content.code.copy
     - content.code.select
     - content.code.annotate
     - navigation.footer
 
- 
   palette:
 
     # Palette toggle for light mode
@@ -31,7 +30,7 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-        
+
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -75,16 +74,5 @@ plugins:
       copyright: © 2025 ООО «Р-Платформа»
       cover_title: Пошаговая инструкция по развертыванию Росплатформы
       cover_subtitle: расшифровка к видео инструкции
+      cover_logo: https://www.rosplatforma.ru/upload/CAllcorp3Digital/a6a/vel73rpwrkdowq4zhbn0r3q9413m0k6p.png
   #    enabled_if_env: ENABLE_PDF_EXPORT
-
- 
-    
-
-
-
-
-    
-
- 
-
-
