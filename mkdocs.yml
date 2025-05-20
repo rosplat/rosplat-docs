@@ -1,4 +1,4 @@
-site_name: rosplat
+site_name: документация
 site_url: https://rosplat.github.io/rosplat-docs/
 theme:
   name: material
@@ -6,6 +6,7 @@ theme:
     repo: fontawesome-solid-file-pdf
     admonition:
       success: material/key-chain-variant
+  copyright: © 2025 ООО «Р-Платформа»
   font:
     text: false
   features:   
@@ -59,7 +60,11 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - tables
-
+# Page tree
+nav:
+  - 1.Подготовка: index.md
+  - 2.Развертывание: deploy.md
+  - 3.По шагам: decryption.md
 extra_css:
   - stylesheets/extra.css
 plugins:
@@ -70,6 +75,8 @@ plugins:
       copyright: © 2025 ООО «Р-Платформа»
       cover_title: Пошаговая инструкция по развертыванию Росплатформы
       cover_subtitle: расшифровка к видео инструкции
+  #    enabled_if_env: ENABLE_PDF_EXPORT
+
  
     
 
