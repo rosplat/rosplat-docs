@@ -74,5 +74,5 @@ plugins:
       copyright: © 2025 ООО «Р-Платформа»
       cover_title: Пошаговая инструкция по развертыванию Росплатформы
       cover_subtitle: расшифровка к видео инструкции
-      cover_logo: https://www.rosplatforma.ru/upload/CAllcorp3Digital/a6a/vel73rpwrkdowq4zhbn0r3q9413m0k6p.png
+      cover_logo: logo.png
   #    enabled_if_env: ENABLE_PDF_EXPORT
