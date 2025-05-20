@@ -4,7 +4,7 @@
 
 **Видеоинструкцию по развертыванию кластера Р-хранилища, на примере развертывания виртуализации, где все действия подходят так же для развертывания и последующих настроек s3 - [rutube.ru](https://rutube.ru/video/9346aa0db44f49fae8a46e95f248f043) или на резервном канале - [youtube.com](https://www.youtube.com/watch?v=jYRByNsKcW8) ,где есть тайм теги:**
 
-!!! тайм_теги
+!!! note annotate "Тайм теги"
     === "ссылки:"
    
         1. **0:00** - [загрузка установщика](https://rutube.ru/video/9346aa0db44f49fae8a46e95f248f043/?t=5&r=plwd)
@@ -40,7 +40,7 @@
 
 **Видеоинструкция по установке и настройке S3 кластера - [rutube.ru канал Rosplatforma](https://rutube.ru/video/9346aa0db44f49fae8a46e95f248f043) или на резервном канале - [youtube.com канал Rosplatforma](https://www.youtube.com/watch?v=f5JEmVl949A)**
 
-!!! тайм_теги
+!!! note annotate "Тайм теги"
 
     === "ссылки:"
 
