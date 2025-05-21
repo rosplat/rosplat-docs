@@ -1,10 +1,6 @@
-:root {
-   /* --md-code-hl-string-color: #0ff13c; */
-   /* --md-code-hl-keyword-color: #0ff13c; */
-   /* --md-code-bg-color: #020202;*/
-   /* --md-code-hl-name-color: #0ff13c; */
-   /* --md-code-hl-operator-color: #0ff13c;*/
-    --md-code-hl-color:#0ff13c; 
+:root > * {
+  --md-code-hl-string-color: #258e05;
+  --md-code-hl-comment-color: #258e05;
 }
 .pdfb {
   float: right;

@@ -11,7 +11,7 @@ theme:
     text: false
   features:
     - content.code.copy
-    - content.code.select
+    - content.code.select    
     - content.code.annotate
     - navigation.footer
 
