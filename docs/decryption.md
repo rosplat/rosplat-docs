@@ -16,26 +16,26 @@
 </figure> 
 Следующим шагом необходимо выбрать время региона. 
 <figure markdown="span">
-  ![Image title](screen2.png){ width="900" }
+  ![Image title](screen3.png){ width="900" }
   <figcaption>Скриншот 3.</figcaption>
 </figure>
 Чтобы продолжить необходимо выбрать принять пользовательское соглашение.
 <figure markdown="span">
-  ![Image title](screen2.png){ width="900" }
+  ![Image title](screen4.png){ width="900" }
   <figcaption>Скриншот 4.</figcaption>
 </figure>
 В разделе дисков как на скриншоте 4 выбирается расположение, куда будет непосредственно устанавливаться система. В данном примере на сервере имеется только один **SSD**, и в этом случае его можно использовать под роль КЭШ на шаге настройки Р-хранилища через веб панель, а систему установить на один из **HDD**.
 <figure markdown="span">
-  ![Image title](screen2.png){ width="900" }
+  ![Image title](screen5.png){ width="900" }
   <figcaption>Скриншот 5.</figcaption>
 </figure>
 Следующий шаг необходимо выполнить настройку в разделе сети как на скриншоте 5. Это будет первая нода в кластере — первая установка на первый сервер. Укажем имя хоста. Далее проведем первичную настройку и подготовку имеющихся интерфейсов. На всех интерфейсах необходимо выключить **IPv6**, а также **IPv4**.
 <figure markdown="span">
-  ![Image title](screen2.png){ width="900" }
+  ![Image title](screen6.png){ width="900" }
   <figcaption>Скриншот 6.</figcaption>
 </figure>
 <figure markdown="span">
-  ![Image title](screen2.png){ width="900" }
+  ![Image title](screen7.png){ width="900" }
   <figcaption>Скриншот 7.</figcaption>
 </figure>
 ???+ success "Важно!"
@@ -54,16 +54,16 @@
     Мы рекомендуем называть таким образом с точки зрения синтаксиса, потому что впоследствии, если вам необходимо будет создать дополнительную виртуальную сеть, то система будет создавать сеть с названием, которое будет иметь аналогичный вид, и в процессе дальнейшей работы и администрирования будет легче ориентироваться среди всех интерфейсов.
 Далее в графе "интерфейс" следует продублировать название соединения, укажем **br-mb0.120** как на скриншоте 8.
 <figure markdown="span">
-  ![Image title](screen2.png){ width="900" }
+  ![Image title](screen8.png){ width="900" }
   <figcaption>Скриншот 8.</figcaption>
 </figure>
 Следующим шагом необходимо задать IP-адрес ноды на скриншоте 10. Параметры **IPv6** мы рекомендуем всегда отключать, поэтому укажем в графе метод "игнорировать". Параметры **IPv4** назначаем вручную как показано на скриншоте 9.
 <figure markdown="span">
-  ![Image title](screen2.png){ width="900" }
+  ![Image title](screen9.png){ width="900" }
   <figcaption>Скриншот 9.</figcaption>
 </figure>
 <figure markdown="span">
-  ![Image title](screen2.png){ width="900" }
+  ![Image title](screen10.png){ width="900" }
   <figcaption>Скриншот 10.</figcaption>
 </figure>
 <figure markdown="span">
