@@ -64,6 +64,7 @@ nav:
   - 1.Подготовка: index.md
   - 2.Развертывание: deploy.md
   - 3.По шагам: decryption.md
+  - 4.Проверка: diagnostics.md
 extra_css:
   - stylesheets/extra.css
   - stylesheets/pdf.css
