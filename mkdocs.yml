@@ -80,4 +80,4 @@ plugins:
       cover_title: Пошаговая инструкция по развертыванию Росплатформы
       cover_subtitle: расшифровка к видео инструкции
       cover_logo: logo.png
-      enabled_if_env: ENABLE_PDF_EXPORT
+  #    enabled_if_env: ENABLE_PDF_EXPORT

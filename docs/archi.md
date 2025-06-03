@@ -1,4 +1,4 @@
-<div class="noprint" style="margin-left: 100px">
+<div class="noprint" style="margin-left: 100px;@media (max-width: 768px) {margin-left: 0;}">
 <input type="checkbox" id="animationToggle2" class="hidden-checkbox">
 <label for="animationToggle2" class="toggle-button">Реплика 2</label>
 <input type="checkbox" id="animationToggle3" class="hidden-checkbox">
