@@ -24,6 +24,7 @@
 }
 .container {
     position: relative;
+    margin-left: 15%;
     width: 500px;
     height: 400px; /* Уменьшил высоту, так как хранилища внизу */
 }
