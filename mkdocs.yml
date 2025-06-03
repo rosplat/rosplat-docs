@@ -59,12 +59,15 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - tables
+  - pymdownx.snippets
+  - md_in_html
 # Page tree
 nav:
   - 1.Подготовка: index.md
   - 2.Развертывание: deploy.md
   - 3.По шагам: decryption.md
   - 4.Проверка: diagnostics.md
+  - 5.Архитектура: archi.md
 extra_css:
   - stylesheets/extra.css
   - stylesheets/pdf.css
@@ -77,5 +80,4 @@ plugins:
       cover_title: Пошаговая инструкция по развертыванию Росплатформы
       cover_subtitle: расшифровка к видео инструкции
       cover_logo: logo.png
-
-  #    enabled_if_env: ENABLE_PDF_EXPORT
+      enabled_if_env: ENABLE_PDF_EXPORT
