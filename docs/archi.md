@@ -43,7 +43,7 @@
         <div class="connection-line line-4"></div>
 </div>
 </div>
-<div>
+<div div class="noprint" style="width: 700px;">
 </br>
 </br><p style="text-align: center">
 <b>Анимационная схема, показывает минимальную </br>конфигурацию кластера Р-хранилища: </b></p>
