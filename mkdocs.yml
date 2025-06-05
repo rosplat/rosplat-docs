@@ -19,14 +19,14 @@ theme:
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default
+      scheme: slate
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+      scheme: default
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -80,4 +80,4 @@ plugins:
       cover_title: Пошаговая инструкция по развертыванию Росплатформы
       cover_subtitle: расшифровка к видео инструкции
       cover_logo: logo.png
-  #    enabled_if_env: ENABLE_PDF_EXPORT
+#      enabled_if_env: ENABLE_PDF_EXPORT

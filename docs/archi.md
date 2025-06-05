@@ -1,12 +1,29 @@
 <div class="noprint">
-<div style="margin-left: 18%;">
+
+<div style="margin-left: 8%;height: 100px;display: flex;justify-content: space-between;">
 <input type="checkbox" id="animationToggle2" class="hidden-checkbox">
 <label for="animationToggle2" class="toggle-button">Реплика 2</label>
 <input type="checkbox" id="animationToggle3" class="hidden-checkbox">
 <label for="animationToggle3" class="toggle-button">Реплика 3</label>
 <input type="checkbox" id="animationToggle3Alt" class="hidden-checkbox">
 <label for="animationToggle3Alt" class="toggle-button">EC 2+1</label>
-</div>
+</div><div style="flex-shrink: 0;wigth: 800px;display: flex;justify-content: space-between;margin-bottom: 5%;margin-left: 18%;">
+         <div style="margin-left: 4%;wigth: 267px;flex-shrink: 0;">
+         оригинальный блок
+         <div class="notes cube-1-4"></div>
+         копия блока
+         <div class="notes cube-2-5"></div></div>
+         <div style="wigth: 267px;flex-shrink: 0;margin-left: 4%;">
+         вторая копия
+         <div class="notes cube-3-6"></div>
+         оригинальный блок
+         <div class="notes cube-4-7"></div></div>
+      <div style="margin-right: 20%;wigth: 267px;flex-shrink: 0;margin-left: 4%;">
+         блок четности   
+         <div class="notes cube-5-8"></div>
+         общение <b>mds</b>
+         <div class="pulse-n"></div></div>
+         </div>
 <div class="container" id="animationContainer">
         <!-- Источник данных (клиент) -->
         <div class="storage source"><p class="textv">ВМ</p>
@@ -45,10 +62,10 @@
 </div>
 </div>
 </br>
-<div class="noprint" style="text-align: center" markdown>
+<div class="noprint" style="text-align: center;" markdown>
 **Анимационная схема, показывает минимальную </br>конфигурацию кластера Р-хранилища:** </div>
 
-<div class="noprint" style="text-align: justify" markdown>
+<div class="noprint" style="text-align: justify;float: left;" markdown>
 
  1. **ВМ с гостевой фс** - это виртуальная машина внутри которой установлена гостевая операционная система с файловой системой. 
  2. **qcow2** - это файл или образ виртуального диска виртаульной машины. 

@@ -24,7 +24,7 @@
 }
 .container {
     position: relative;
-    margin-left: 15%;
+    margin-left: 18%;
     width: 500px;
     height: 400px; /* Уменьшил высоту, так как хранилища внизу */
 }
@@ -224,6 +224,33 @@
     z-index: 100;
     box-shadow: 0 0 10px 5px rgba(0, 255, 255, 0.5);
 }
+.notes {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+.cube-1-4 {
+    background-color: #e74c3c;
+}
+.cube-2-5 {
+    background-color: #f39c12;
+}
+.cube-3-6 {
+    background-color: #f3ec12;
+}
+.cube-4-7 {
+    background-color: #47ab19;
+}
+.cube-5-8 {
+    background-color: #a2edf5;
+}
+.pulse-n {
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 255, 255, 0.7);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(0, 255, 255, 0.5);
+}
 /*
 @keyframes moveToStorage1 {
   0% { transform: translate(0, 0); opacity: 1; }
@@ -274,7 +301,9 @@
     border: 2px solid #3463db; /* Цветной контур */
     border-radius: 4px;
     cursor: pointer;
-    margin: 20px;
+    flex-shrink: 0;
+    height: 45px;
+    margin: 15px;
     font-family: Arial;
     transition: all 0.3s ease; /* Плавный переход */
 }
