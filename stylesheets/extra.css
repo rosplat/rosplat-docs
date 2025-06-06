@@ -1,0 +1,382 @@
+:root > * {
+  --md-code-hl-string-color: #258e05;
+  --md-code-hl-comment-color: #258e05;
+}
+.pdfb {
+  float: right;
+}
+@keyframes heart {
+  0%, 40%, 80%, 100% {
+    transform: scale(1);
+  }
+  20%, 60% {
+    transform: scale(1.15);
+  }
+}
+.heart {
+  animation: heart 1000ms infinite;
+}
+
+@media print {
+  .noprint {
+    display: none !important
+  }
+}
+.container {
+    position: relative;
+    margin-left: 18%;
+    width: 500px;
+    height: 400px; /* Уменьшил высоту, так как хранилища внизу */
+}
+
+/* Большие прозрачные квадраты (хранилища) */
+.storage {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 2px dashed #333;
+    display: flex;
+   /* justify-content: center;*/
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.037);
+}
+
+/* Источник (клиент) — оставляем вверху */
+.source {
+    top: 10px;
+    left: 11%; /* Центрируем */
+    transform: translateX(-50%); /* Точное центрирование */
+    border: 1px solid #3498db; /* Граница */
+    border-radius: 4px;   /* Скругление углов */
+}
+.commutator {
+    top: 10px;
+    width: 200px;
+    left: 150px; /* Центрируем */
+    transform: translateX(+80%); /* Точное центрирование */
+    border: 1px solid #3498db; /* Граница */
+    border-radius: 4px;   /* Скругление углов */
+    text-align: center;
+    background: rgba(14, 16, 32, 0.338);
+}
+
+/* Хранилища — выстраиваем в ряд внизу */
+.storage-1 {
+    bottom: 10px;
+    left: 10px;
+    border-color: #e74c3c;
+    border-radius: 4px;
+    background: rgba(231, 76, 60, 0.1);
+}
+
+.storage-2 {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: #e74c3c;
+    border-radius: 4px;
+    background: rgba(243, 156, 18, 0.1);
+}
+
+.storage-3 {
+    bottom: 10px;
+    right: 10px;
+    border-color: #e74c3c;
+    border-radius: 4px;
+    background: rgba(243, 236, 18, 0.1); 
+}
+.server1 {
+    height: 250px;
+    width: 100px;
+    bottom: 10px;
+    left: 8px;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    background: rgba(14, 16, 32, 0.338);
+}
+
+.server2 {
+    height: 250px;
+    width: 100px;  
+    bottom: 10px;
+    left: 48%;
+    transform: translateX(-50%);
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    background: rgba(14, 16, 32, 0.338);
+}
+
+.server3 {
+    width: 100px;
+    height: 250px;
+    right: 8px;
+    bottom: 10px;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    background: rgba(14, 16, 32, 0.338);
+}
+
+.client {
+    width: 90px;
+    height: 50px;
+    bottom: 190px;
+    left: 5px;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+}
+.textk {
+    position: absolute; 
+    top: 5px;
+    left: 2px;
+
+}
+.textb {
+    position: absolute; 
+    top: 250px;
+
+}
+.textc { 
+    top: 1px;
+
+}
+.textv {
+    position: absolute; 
+    bottom: 30px;
+    left: 25px;
+
+}
+.qcow2 {
+    width: 70px;
+    height: 20px;
+    bottom: 15px;
+    left: 40px;
+    background-color: rgba(219, 74, 52, 0.3);
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    animation: pulse 2s infinite;
+}
+.mds {
+    width: 50px;
+    height: 30px;
+    left: 10px;
+    top: 80px;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+}
+/* Маленькие кубики (данные) */
+.cube {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    opacity: 0;
+  /*  top: 100px; */
+    left: 15%;
+    opacity: 0;
+    transform-origin: center;
+    
+} 
+
+/* Применение анимации к кубикам */
+.cube-1 { /* Стили для первого кубика */
+  /*  background-color: #e74c3c;  Красный цвет */
+    top: 180px;                /* Стартовая позиция: 180px от верха контейнера */
+    left: 15%;                /* Центрирование по горизонтали */
+ /*   animation: moveToStorage1 2s infinite; */
+    transform-origin: center;
+    /* 
+      - Использует анимацию `moveToStorage1`.
+      - Длительность: 2 секунды.
+      - Повторяется бесконечно (`infinite`).
+    */
+}
+
+.cube-2 {
+  /*  background-color: #f39c12;  Зелёный цвет */
+    top: 180px;                /* Стартовая позиция: 180px от верха контейнера */
+    left: 15%;
+ /*   animation: moveToStorage2 2s infinite; */
+    transform-origin: center;
+  
+}
+
+.cube-3 {
+  /*  background-color: #f3ec12;  Оранжевый цвет */
+    top: 180px;                /* Стартовая позиция: 180px от верха контейнера */
+    left: 15%;
+ /*   animation: moveToStorage3 2s infinite 0.08s; */
+    transform-origin: center;
+    /* 
+      - Анимация `moveToStorage3`.
+      - Задержка старта: 0.03 микросекунда.
+    */
+}
+.cube-1.alt-color { background-color: #47ab19; } /* Зеленый */
+.cube-2.alt-color { background-color: #47ab19; } /* Зеленый */
+.cube-3.alt-color { background-color: #a2edf5; } /* Светло-зеленый */
+.pulse-effect {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 255, 255, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    box-shadow: 0 0 10px 5px rgba(0, 255, 255, 0.5);
+}
+.notes {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+.cube-1-4 {
+    background-color: #e74c3c;
+}
+.cube-2-5 {
+    background-color: #f39c12;
+}
+.cube-3-6 {
+    background-color: #f3ec12;
+}
+.cube-4-7 {
+    background-color: #47ab19;
+}
+.cube-5-8 {
+    background-color: #a2edf5;
+}
+.pulse-n {
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 255, 255, 0.7);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(0, 255, 255, 0.5);
+}
+/*
+@keyframes moveToStorage1 {
+  0% { transform: translate(0, 0); opacity: 1; }
+  50% { transform: translate(0, 100px); opacity: 1; }
+  100% { transform: translate(0px, 150px); opacity: 1; }
+}
+
+@keyframes moveToStorage2 {
+  0% { transform: translate(0, 0); opacity: 1; }
+  50% { transform: translate(180px, -140px); opacity: 1; }
+  100% { transform: translate(180px, 150px); opacity: 1; }
+}
+
+@keyframes moveToStorage3 {
+  0% { transform: translate(0, 0); opacity: 1; }
+  50% { transform: translate(180px, -140px); opacity: 1; }
+  100% { transform: translate(380px, 150px); opacity: 1; }
+}*/
+/* Стили для вложенного клиента */
+.inner-client {
+    width: 50px;          /* Ширина */
+    height: 30px;         /* Высота */
+    background-color: rgba(219, 74, 52, 0.3); /* Полупрозрачный голубой */
+    border: 1px solid #3498db; /* Граница */
+    border-radius: 4px;   /* Скругление углов */
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    font-size: 10px;      /* Размер текста */
+    position: absolute;    /* Абсолютное позиционирование внутри .source */
+    top: 65%;            /* Размещение по центру */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Точное центрирование */
+    animation: pulse 2s infinite;
+}
+
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+.toggle-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background: transparent; /* Прозрачный фон */
+    color: #3463db; /* Цвет текста как у контура */
+    border: 2px solid #3463db; /* Цветной контур */
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 45px;
+    margin: 15px;
+    font-family: Arial;
+    transition: all 0.3s ease; /* Плавный переход */
+}
+
+.toggle-button:hover {
+    background-color: #3463db; /* Заполняем фон цветом */
+    color: white; /* Меняем цвет текста для контраста */
+    /* Можно добавить дополнительные эффекты: */
+    box-shadow: 0 0 10px rgba(52, 99, 219, 0.5);
+}
+.toggle-button.active {
+    background-color: #3463db;
+    color: white;
+    box-shadow: 0 0 10px rgba(52, 99, 219, 0.5);
+}
+
+.hidden-checkbox {
+    display: none;
+}
+
+#animationToggle:not(:checked) ~ .container .cube {
+    animation-play-state: paused;
+    opacity: 0;
+}
+
+#animationToggle:checked ~ .container .cube {
+    animation-play-state: running;
+    opacity: 0;
+}
+.connection-line {
+    position: absolute;
+    height: 2px; /* Толщина линии */
+    background: transparent;
+    border-bottom: 2px dashed rgba(52, 152, 219, 0.5);
+    transform-origin: left center;
+}
+
+
+/* Линия к серверу 1 */
+.line-1 {
+    width: 155px;
+    height: 145px;
+    left: 65px;
+    top: 40px;
+    transform: rotate(-40deg); 
+}
+
+/* Линия к серверу 2 */
+.line-2 {
+    width: 75px;
+    height: 120px;
+    left: 320px;
+    top: 5px;
+    transform: rotate(90deg); 
+}
+
+/* Линия к серверу 3 */
+.line-3 {
+    width: 190px;
+    height: 100px;
+    left: 350px;
+    top: 199px;
+    transform: rotate(-125deg);
+}
+.line-4 {
+    width: 75px;
+    height: 10px;
+    left: 52px;
+    top: 150px;
+    transform: rotate(-90deg);
+    animation: line-pulse 1s infinite;
+}
+@keyframes line-pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}

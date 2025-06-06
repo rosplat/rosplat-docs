@@ -1,0 +1,1761 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://rosplat.github.io/rosplat-docs/decryption/">
+      
+      
+        <link rel="prev" href="../deploy/">
+      
+      
+        <link rel="next" href="../diagnostics/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>3.По шагам - документация</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12.66%2013.67c-.34.33-.73.62-1.16.83V21l-2%202-2-2%202-1.71L8%2018l1.5-1.29-2-1.71v-.5a4.42%204.42%200%200%201-2.5-4C5%208%207%206%209.5%206h.11c-.02.07-.07.12-.11.18-.27.61-.42%201.25-.47%201.9A1.498%201.498%200%200%200%209.5%2011h.1c.64%201.25%201.74%202.2%203.06%202.67M16%206c0-.63-.1-1.25-.28-1.82%201.34.38%202.49%201.37%203.01%202.78.6%201.66.16%203.43-.98%204.63L20%2017.68l-1.22%202.57-2.56-1.2%201.28-2.29-1.84-.7.97-1.72-2.47-.93-.16-.46a4.48%204.48%200%200%201-3.73-2.91%204.51%204.51%200%200%201%202.69-5.77c.18-.06.37-.1.54-.14A3.95%203.95%200%200%200%2010%202C7.79%202%206%203.79%206%206c0%20.09%200%20.17.03.26-.33.27-.63.56-.88.89C5.06%206.78%205%206.4%205%206c0-2.76%202.24-5%205-5s5%202.24%205%205c0%201.16-.4%202.21-1.06%203.06C16.08%208.88%2016%206%2016%206m-3.19%202.1c.06.17.15.31.25.44.56-.66.91-1.5.94-2.43-.11.02-.2.04-.3.07-.78.29-1.2%201.15-.89%201.92%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/pdf.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="документация" class="md-header__button md-logo" aria-label="документация" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            документация
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3.По шагам
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="документация" class="md-nav__button md-logo" aria-label="документация" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    документация
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.Подготовка
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.Развертывание
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    3.По шагам
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.По шагам
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      загрузка установщика
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      предустановочные настройки первого сервера с контейнерами управления
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      дополнительные настройки в процессе установки
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      проверка доступности контейнеров управления
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      загрузка установщика последующих серверов (без контейнеров)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      подключение к контейнеру управления Р-хранилища для настройки кластера
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      настройка сетевых ролей сервера
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      создание кластера
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      настройка дисковых ролей
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      регистрация серверов в панели Р-Хранилища
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      настройка сетевых ролей зарегистрированных серверов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      добавление зарегистрированных серверов в кластер
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      создание кластерного датастора для виртуальных сред
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      начало работы с панелью Р-Виртуализации
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      регистрация серверов в панели Р-Виртуализации
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      установка лицензии для Р-Виртуализации на серверах
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      настройка хранения виртуальных сред в датасторе
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      перемещение контейнеров управления в датастор
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      запуск службы отказоустойчивости на серверах
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      создание виртуальных сред
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      создание VLAN и добавление в него виртуальных машин
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      проверка сетевой доступности между виртуальными машинами одного vlan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      проверка живой миграции виртуальных сред
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      проверка восстановления работы виртуальных сред при аварийном выходе из строя сервера
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      настройка сети хранилища для обеспечения максимальной производительности
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagnostics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.Проверка
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.Архитектура
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      загрузка установщика
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      предустановочные настройки первого сервера с контейнерами управления
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      дополнительные настройки в процессе установки
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      проверка доступности контейнеров управления
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      загрузка установщика последующих серверов (без контейнеров)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      подключение к контейнеру управления Р-хранилища для настройки кластера
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      настройка сетевых ролей сервера
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      создание кластера
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      настройка дисковых ролей
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      регистрация серверов в панели Р-Хранилища
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      настройка сетевых ролей зарегистрированных серверов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      добавление зарегистрированных серверов в кластер
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      создание кластерного датастора для виртуальных сред
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      начало работы с панелью Р-Виртуализации
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      регистрация серверов в панели Р-Виртуализации
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      установка лицензии для Р-Виртуализации на серверах
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      настройка хранения виртуальных сред в датасторе
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      перемещение контейнеров управления в датастор
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      запуск службы отказоустойчивости на серверах
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      создание виртуальных сред
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      создание VLAN и добавление в него виртуальных машин
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      проверка сетевой доступности между виртуальными машинами одного vlan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      проверка живой миграции виртуальных сред
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      проверка восстановления работы виртуальных сред при аварийном выходе из строя сервера
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      настройка сети хранилища для обеспечения максимальной производительности
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1"><strong>Пошаговая инструкция:</strong></h1>
+<div class="admonition примечание">
+<p class="admonition-title">Примечание</p>
+<p>расшифровка видео</p>
+</div>
+<hr />
+<h2 id="_2"><strong>загрузка установщика</strong></h2>
+<figure>
+  <img alt="Image title" src="../screen1.png" width="900" />
+<br />
+<figcaption>Скриншот 1.</figcaption>
+</figure>
+<p>При запуске установщика появится меню как скриншоте 1, где необходимо выбрать первый пункт или если не выбирать, то через несколько секунд система автоматический выберет его.</p>
+<figure>
+  <img alt="Image title" src="../screen2.png" width="900" />
+<br />
+<figcaption>Скриншот 2.</figcaption>
+</figure>
+<p>Следующим шагом необходимо выбрать время региона. </p>
+<figure>
+  <img alt="Image title" src="../screen3.png" width="900" />
+<br />
+<figcaption>Скриншот 3.</figcaption>
+</figure>
+<p>Чтобы продолжить необходимо выбрать принять пользовательское соглашение.</p>
+<figure>
+  <img alt="Image title" src="../screen4.png" width="900" />
+<br />
+<figcaption>Скриншот 4.</figcaption>
+</figure>
+<p>В разделе дисков как на скриншоте 4 выбирается расположение, куда будет непосредственно устанавливаться система. В данном примере на сервере имеется только один <strong>SSD</strong>, и в этом случае его можно использовать под роль КЭШ на шаге настройки Р-хранилища через веб панель, а систему установить на один из <strong>HDD</strong>.</p>
+<figure>
+  <img alt="Image title" src="../screen5.png" width="900" />
+<br />
+<figcaption>Скриншот 5.</figcaption>
+</figure>
+<p>Следующий шаг необходимо выполнить настройку в разделе сети как на скриншоте 5. Это будет первая нода в кластере — первая установка на первый сервер. Укажем имя хоста. Далее проведем первичную настройку и подготовку имеющихся интерфейсов. На всех интерфейсах необходимо выключить <strong>IPv6</strong>, а также <strong>IPv4</strong>.</p>
+<figure>
+  <img alt="Image title" src="../screen6.png" width="900" />
+<br />
+<figcaption>Скриншот 6.</figcaption>
+</figure>
+<figure>
+  <img alt="Image title" src="../screen7.png" width="900" />
+<br />
+<figcaption>Скриншот 7.</figcaption>
+</figure>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>После проведения первичной настройки интерфейсов обратите внимание на то, что все интерфейсы, которые вы планируете использовать в сети управления и в сети хранилища, находятся в статусе "подключен" как на скриншоте 7.</p>
+</details>
+<p>После того как первичная настройка интерфейсов завершена, можно перейти к следующему этапу. Согласно рекомендациям, для обеспечения отказоустойчивости требуется агрегация портов. </p>
+<p>Для работы виртуализации требуется создание такого интерфейса, как мост, и при этом с агрегированными портами. Они будут находиться в отдельном <strong>VLAN</strong>, который предназначается для сети управления. Сборка такой связки начинается с создания моста. </p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>Самый распространённый сценарий использования сети — это когда сеть панели Р-управления в отдельном <strong>VLAN</strong>. <strong>VLAN</strong> для других сетей можно уже будет сделать после установки и настройки Р-управления. </p>
+</details>
+<p>Выберите тип устройства — выберем <strong>Bridge</strong>. В названии соединения можно указывать не более 16 символов. В нашем примере название соединения будет следующим образом: <strong>br-mb0.120</strong>. Такое название оптимально с точки зрения удобства администрирования, когда вы собираете связку и в дальнейшем при создании других сетей через панель, она их будет создавать с именами аналогичным образом. </p>
+<p>В имени тип создаваемого интерфейса — мост (<strong>Bridge</strong>), дальше идет <strong>mb0</strong>, где <strong>b</strong> означает <strong>Bond</strong> (агрегированные порты), 0 — это его порядковый номер, нумерация начинается с нуля, то есть это первый бонд, первая группа с агрегированных портов, m говорит о том, что этот бонд обеспечивает сеть управления (Management <strong>Bond</strong>). </p>
+<p>Через точку указывается <strong>VLAN</strong>, в котором будет присутствовать данный агрегированный порт.</p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>Мы рекомендуем называть таким образом с точки зрения синтаксиса, потому что впоследствии, если вам необходимо будет создать дополнительную виртуальную сеть, то система будет создавать сеть с названием, которое будет иметь аналогичный вид, и в процессе дальнейшей работы и администрирования будет легче ориентироваться среди всех интерфейсов.</p>
+</details>
+<p>Далее в графе "интерфейс" следует продублировать название соединения, укажем <strong>br-mb0.120</strong> как на скриншоте 8.</p>
+<figure>
+  <img alt="Image title" src="../screen8.png" width="900" />
+<br />
+<figcaption>Скриншот 8.</figcaption>
+</figure>
+<p>Следующим шагом необходимо задать IP-адрес ноды на скриншоте 10. Параметры <strong>IPv6</strong> мы рекомендуем всегда отключать, поэтому укажем в графе метод "игнорировать". Параметры <strong>IPv4</strong> назначаем вручную как показано на скриншоте 9.</p>
+<figure>
+  <img alt="Image title" src="../screen9.png" width="900" />
+<br />
+<figcaption>Скриншот 9.</figcaption>
+</figure>
+<figure>
+  <img alt="Image title" src="../screen10.png" width="900" />
+<br />
+<figcaption>Скриншот 10.</figcaption>
+</figure>
+<figure>
+  <img alt="Image title" src="../screen11.png" width="900" />
+<br />
+<figcaption>Скриншот 11.</figcaption>
+</figure>
+<p>Далее необходимо создать <strong>VLAN</strong> в разделе мост, в котором будет находиться <strong>bond</strong>. Название соединения указывается такое же, каким оно было на этапе создания моста, но только без предшествующего префикса <strong>br</strong>. Подобные названия в дальнейшем будут необходимы при администрировании имеющихся виртуальных сетей. Тег <strong>VLAN</strong> – 120 на скриншоте, у вас будет свой номер в зависимости от настроек вашей сети (физического коммутатора). Имя интерфейса <strong>VLAN</strong> – тут следует продублировать название соединения. </p>
+<figure>
+  <img alt="Image title" src="../screen12.png" width="900" />
+<br />
+<figcaption>Скриншот 12.</figcaption>
+</figure>
+<p>Следующим шагом необходимо добавить <strong>Bond</strong>. В поле “Родительский интерфейс” - в выпадающем меню можно выбрать графу создать соединение. Тип соединения - <strong>Bond</strong>. Название соединения выставляем <strong>mb0</strong>, интерфейс продублируем mb0, режим поставим <strong>LACP</strong> он же <strong>802.3ad</strong>, и теперь добавим интерфейсы, которые будут в качестве <strong>slave</strong>.</p>
+<figure>
+  <img alt="Image title" src="../screen13.png" width="900" />
+<br />
+<figcaption>Скриншот 13.</figcaption>
+</figure>
+<p>В названии соединения для последующего администрирования прописываются такие же названия интерфейсов, какие назначила система.</p>
+<figure>
+  <img alt="Image title" src="../screen14.png" width="900" />
+<br />
+<figcaption>Скриншот 14.</figcaption>
+</figure>
+<p>После того как собрана вся связка необходимо по порядку во всех открытых окнах нажать кнопку "сохранить": <strong>Bond</strong>, <strong>VLAN</strong> и мост. </p>
+<p>Следующим шагом перейти в настройки <strong>Bond</strong>. В параметре <strong>IPv6</strong> и обязательно не забудьте это сделать, установите опцию "игнорировать". Далее перейдите в параметры <strong>IPv4</strong> и выключите. Это необходимо сделать, для исключения <strong>flapping</strong>-а сетевых интерфейсов.</p>
+<figure>
+  <img alt="Image title" src="../screen15.png" width="900" />
+<br />
+<figcaption>Скриншот 15.</figcaption>
+</figure>
+<p>Когда <strong>Bond</strong> включен, он отобразит зависимые интерфейсы как на скриншоте 15. Как минимум должно быть два зависимых интерфейса. </p>
+<figure>
+  <img alt="Image title" src="../screen16.png" width="900" />
+<br />
+<figcaption>Скриншот 16.</figcaption>
+</figure>
+<p>Также должен быть виден в списке <strong>VLAN</strong>, который создавался, и которого родительский интерфейс <strong>Bond</strong>, и мост с сетевыми настройками, которые принадлежат ноде.</p>
+<figure>
+  <img alt="Image title" src="../screen17.png" width="900" />
+<br />
+<figcaption>Скриншот 17.</figcaption>
+</figure>
+<p>Если у вас получилось так как на предыдущих скриншотах и на скриншоте 17, то далее переходим к настройке сети хранилища. Для работы сети хранилища не требуется мост, а также не используется <strong>VLAN</strong>, поэтому переходим сразу к созданию <strong>Bond</strong>'а. Первым делом перейдем во вкладку «основное» и установим галочку, чтобы не создался мост автоматически как на скриншоте 18.</p>
+<figure>
+  <img alt="Image title" src="../screen18.png" width="900" />
+<br />
+<figcaption>Скриншот 18.</figcaption>
+</figure>
+<p>Название соединения прописываем <strong>sb1</strong>, потому что это уже второй Bond по нумерации, поэтому будет цифра один — Storage <strong>Bond</strong> 1 (<strong>sb1</strong>). Интерфейс - продублируем название <strong>sb1</strong>. Параметры <strong>IPv6</strong> мы рекомендуем отключать, выставляя значение игнорировать. Поставим в графе параметры <strong>IPv4</strong> "вручную", следует указать тот <strong>IP</strong>-адрес, который предполагается для сети хранилища на этой ноды. </p>
+<p>Прописывается только <strong>IP</strong>-адрес и маска сети. В настройках сети хранилища не должно быть ни шлюза, ни <strong>DNS</strong>. Режим выставляем на <strong>LACP</strong> (<strong>802.3ad</strong>) как на скриншоте 20 и добавим <strong>slave</strong> интерфейсы для агрегации как на скриншоте 19. В текущем случае это будут два интерфейса по 10 Гигабит. Назовём соединение <strong>slave</strong> интерфейсы также, как их называла система. </p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>После того как настройки сети для хранилища завершены можно проверить c других устройств (если есть такая возможность) из этой же сети с помощью <strong>ping</strong> доступность настроенного адреса ноды. Для сети управления также можно выполнить эту же проверку только со стороны устройств, имеющих адресацию из этой же сети. </p>
+<p>В случае отсутствия <strong>ping</strong> необходимо перепроверить правильность выполнения проверки, а далее перепроверить все настройки, выполненные выше. Если все в порядке, <strong>ping</strong> должен быть непрерывным в противном случае необходимо проверять настройки коммутационного оборудования или аппаратные проблемы.</p>
+</details>
+<figure>
+  <img alt="Image title" src="../screen19.png" width="900" />
+<br />
+<figcaption>Скриншот 19.</figcaption>
+</figure>
+<figure>
+  <img alt="Image title" src="../screen20.png" width="900" />
+<br />
+<figcaption>Скриншот 20.</figcaption>
+</figure>
+<hr />
+<h2 id="_3"><strong>предустановочные настройки первого сервера с контейнерами управления</strong></h2>
+<p>Следующий шаг — это настройка панели управления. Это делается при установке только первой ноды, следует отметить пункт “управления и виртуализации” как на скриншоте 21, чтобы была установлена панель управления, и необходимо назначить <strong>IP</strong>-адрес панели управления. Должен быть <strong>IP</strong>-адрес, который заведомо выделен и свободен для веб-интерфейса Р-управления, и он обязательно из этой же сети, которая предусмотрена для сети управления. На этапе установки имя хоста панели управления можно прописать любое или ассоциированное с тем, что это будет относится к панели управления виртуализацией, которая может находится на любых хостах-участниках кластера.</p>
+<figure>
+  <img alt="Image title" src="../screen21.png" width="900" />
+<br />
+<figcaption>Скриншот 21.</figcaption>
+</figure>
+<p>Далее настройка панели <strong>Р-Хранилище</strong> также при первой установке на первую ноду. Надо выбрать самый первый пункт панель управления и <strong>Р-хранилище</strong> для установки панели управления скриншот 22. </p>
+<p><strong>IP</strong>-адрес панели управления <strong>Р-хранилища</strong> также должен быть в сети управления, и также надо указать заведомо свободный для веб-интерфейса <strong>IP</strong>-адрес. Имя хоста панели управления хранилищем можно ассоциировать с тем, что это будет панель для визуального управления, так как сам кластер Р-хранилища может работать и управляться без панели после завершения всех настроек.</p>
+<figure>
+  <img alt="Image title" src="../screen22.png" width="900" />
+<br />
+<figcaption>Скриншот 22.</figcaption>
+</figure>
+<figure>
+  <img alt="Image title" src="../screen23.png" width="900" />
+<br />
+<figcaption>Скриншот 23.</figcaption>
+</figure>
+<hr />
+<h2 id="_4"><strong>дополнительные настройки в процессе установки</strong></h2>
+<p>На этом этапе первичные настройки завершены, можно перейти непосредственно к установке Росплатформы на сервер, где в следующем открывшемся меню можно перейти в <strong>ready kernel</strong>  и можно выключить функцию автоматическое обновления ядра, далее зададим пароль для пользователя <strong>root</strong>. Создание дополнительных пользователей на этом этапе не требуется, это можно сделать после.</p>
+<p>Перейдем во вкладку "лицензионный ключ", оставим поле пустым, потому что лицензионный ключ будет вводиться позже после установки, нажмем "готово" и дождемся завершения установки.</p>
+<figure>
+  <img alt="Image title" src="../screen24.png" width="900" />
+<br />
+<figcaption>Скриншот 24.</figcaption>
+</figure>
+<hr />
+<h2 id="_5"><strong>проверка доступности контейнеров управления</strong></h2>
+<p>После перезагрузки ноды, можно на нее зайти, используя логин <strong>root</strong> и пароль по <strong>SSH</strong>, который указывался при установке ноды. Также проверим доступность веб-интерфейса Р-управления и проверим доступность контейнера управления Р-хранилища по тем <strong>IP</strong>-адресам, которые назначали при установке.</p>
+<figure>
+  <img alt="Image title" src="../screen25.png" width="900" />
+<br />
+<figcaption>Скриншот 25.</figcaption>
+</figure>
+<p>Откроем в браузере веб-панель управления, пропишем <strong>IP</strong>-адрес, который задавался на этапе установки Росплатформы. Будем использовать учетную запись с паролем, который также был задан на этапе установки.</p>
+<figure>
+  <img alt="Image title" src="../screen26.png" width="900" />
+<br />
+<figcaption>Скриншот 26.</figcaption>
+</figure>
+<p>Проверим также веб-интерфейс <strong>Р-хранилище</strong>. Используя учетную запись root и пароль, заданный при установке, можно войти в интерфейс <strong>Р-хранилища</strong>.</p>
+<hr />
+<h2 id="_6"><strong>загрузка установщика последующих серверов (без контейнеров)</strong></h2>
+<p>После завершения проверки можно переходить к установке Росплатформы на остальные сервера. Установка Росплатформы на оставшиеся сервера выполняется аналогичным способом за исключением одного: во вкладке <strong>Р-управление</strong> необходимо выбрать второй из двух пунктов "Виртуализация - регистрация в существующих панелях управления".</p>
+<figure>
+  <img alt="Image title" src="../screen27.png" width="900" />
+<br />
+<figcaption>Скриншот 27.</figcaption>
+</figure>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>Здесь сразу можно выполнить регистрацию, однако рекомендуется выполнять регистрацию вручную после установки для исключения путаницы в сетевой инфраструктуре, поэтому оставим эти графы пустыми.</p>
+</details>
+<figure>
+  <img alt="Image title" src="../screen28.png" width="900" />
+<br />
+<figcaption>Скриншот 28.</figcaption>
+</figure>
+<p>Теперь перейдем во вкладку <strong>Р-хранилище</strong>, выберем второй из трех имеющихся вариантов "Хранилище данных - регистрация существующих панелях управления" и также оставим имеющиеся поля ниже пустыми, нажмем "готово", нажмем "далее", и можно начинать установку.</p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>Здесь не описывается процесс настройки сетевых интерфейсов, выбор системного диска и времени, потому что эти настройки выполняются аналогично описанию при установки первой ноды. </p>
+</details>
+<figure>
+  <img alt="Image title" src="../screen29.png" width="900" />
+<br />
+<figcaption>Скриншот 29.</figcaption>
+</figure>
+<hr />
+<h2 id="-"><strong>подключение к контейнеру управления Р-хранилища для настройки кластера</strong></h2>
+<p>После того как установка Росплатформы выполнена на всех узлах, можно перейти в панель <strong>Р-хранилища</strong>. Для этого введем в адресной строке браузера ее <strong>IP</strong>-адрес, который указывали на этапе установки. Для входа используется учетная запись root и пароль, который задавался на этапе установки.</p>
+<hr />
+<h2 id="_7"><strong>настройка сетевых ролей сервера</strong></h2>
+<p>Тут пока видим одну единственную ноду, как раз ту, на которой находится контейнер управления и хранилища. Первым делом надо настроить сетевые роли ноды. Зайдем в ноду, далее в настройки её сетевых интерфейсов - <strong>Network</strong>. Выберем сеть Р-управления и назначим роли для сети Р-управления.</p>
+<p>Следует выбрать роли управления Панель управления и <strong>SSH</strong>, лишнее уберем. Применим и перейдем к настройке ролей для сети <strong>Р-хранилища</strong>. Для сети <strong>Р-хранилища</strong> оставим <strong>SSH</strong> и добавим роль непосредственно хранилища “<strong>Storage</strong>”, применим заданные параметры.</p>
+<figure>
+  <img alt="Image title" src="../screen30.png" width="900" />
+<br />
+<figcaption>Скриншот 30.</figcaption>
+</figure>
+<hr />
+<h2 id="_8"><strong>создание кластера</strong></h2>
+<p>Далее после завершения настройки сетевых ролей можно создать кластер. Перейдем для этого еще раз в ноду, и здесь выберем пункт "создать кластер". Язык интерфейса можно сменить на русский.</p>
+<figure>
+  <img alt="Image title" src="../screen31.png" width="900" />
+<br />
+<figcaption>Скриншот 31.</figcaption>
+</figure>
+<p>В первой графе можно задать название вашего кластера, в нашем случае <strong>c01</strong>. Сразу автоматически подхватывается сеть <strong>Р-хранилища</strong>, если предварительно правильно настроили сетевые роли, и далее перейдем в дополнительные настройки.</p>
+<hr />
+<h2 id="_9"><strong>настройка дисковых ролей</strong></h2>
+<p>В расширенных настройках “<strong>advanced configuration</strong>” можно изменить роли дисков, которые были им присвоены системой по умолчанию.</p>
+<p>Дело в том, что можно по-разному организовывать дисковое пространство, объединяя их в разные уровни, которые могут использоваться для хранения разных типов данных, а также для разграничения более производительных дисков от более медленных. </p>
+<p>В нашей конфигурации будет использоваться один <strong>SSD</strong>-диск для хранения на нем кэша или, другими словами, согласно нашей архитектуре журналы записи для жестких дисков. </p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>Это рекомендуется для обеспечения более высокой производительности. Как правило, один <strong>SSD</strong>-диск может обеспечить хранение кэша(журналы записи) для 3-4 жестких дисков. Однако это зависит от технических характеристик дисков, и этого <strong>SSD</strong>-диска хватит только на два жестких диска. Чтобы это работало необходимо еще объединить в один уровень. Оставшиеся жесткие диски в другой медленный уровень, так как кэш этих жестких дисков будет храниться на них же, и производительность этого уровня будет несколько ниже.</p>
+</details>
+<figure>
+  <img alt="Image title" src="../screen32.png" width="900" />
+<br />
+<figcaption>Скриншот 32.</figcaption>
+</figure>
+<p>Роли изменены в соответствии с вышесказанной рекомендацией, создадим кластер с новыми параметрами. </p>
+<p>После создания кластера увидим, что в левой части <strong>web</strong>-интерфейса Р-хранилище появились дополнительные пункты с дополнительными настройками.</p>
+<figure>
+  <img alt="Image title" src="../screen33.png" width="900" />
+<br />
+<figcaption>Скриншот 33.</figcaption>
+</figure>
+<p>Теперь необходимо проверить, правильно ли применились роли на дисках. Перейдем в ноду, откроем диски и убедимся, что все корректно, все так, как и задавалось на этапе создания кластера. </p>
+<hr />
+<h2 id="-_1"><strong>регистрация серверов в панели Р-Хранилища</strong></h2>
+<p>После создания кластера надо зарегистрировать остальные ноды в панели <strong>Р-Хранилища</strong>. Для регистрации остальных нод в панели управления R-хранилища надо зайти на них по <strong>SSH</strong>, используя их <strong>IP</strong>-адрес сети <strong>Р-управления</strong>, который задавался на этапе установки, и выполнить определенную команду, показанную под скриншотом 34. </p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>Регистрация с помощью командной строки используется, чтобы исключить возможную путаницу в сети при развертывании кластера под продуктивную среду. В более простых кластерах без агрегации для ознакомления софтом можно указывать <strong>IP</strong>-адрес панели управления сразу в инсталляторе, чтобы при установке узлов они сразу регистрировались в панели управления <strong>Р-хранилища</strong>.</p>
+</details>
+<figure>
+  <img alt="Image title" src="../screen34.png" width="900" />
+<br />
+<figcaption>Скриншот 34.</figcaption>
+</figure>
+<p>Команда, которую надо выполнить: 
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">#/usr/libexec/vstorage-ui-agent/bin/register-storage-node.sh -m 192.168.12.8 -t 5b451b92</span>
+</span></code></pre></div>
+после ключа <strong>-m</strong> надо указать <strong>IP</strong>-адрес панели управления Р-хранилище. В нашем случае это <strong>192.168.12.8</strong>, тот самый адрес, который с портом <strong>8888</strong>, и после ключа <strong>-t</strong> надо указать токен. </p>
+<p>Токен как на скриншоте 34 можно получить непосредственно в панели управления, нажав кнопку "добавить ноду" или "<strong>add node</strong>" смотря какая языковая раскладка, его копируем, вставляем в команду и выполняем ее. Пример выполнения на скриншоте 35-36.</p>
+<figure>
+  <img alt="Image title" src="../screen35.png" width="900" />
+<br />
+<figcaption>Скриншот 35.</figcaption>
+</figure>
+<p>После выполнения команды нода появится в панели управления <strong>Р-хранилище</strong>, но сначала на ней отображается символ троеточия, надо дождаться, пока этот символ сменится на вопросительный знак, для ускорения этого процесса можно обновить страницу.</p>
+<figure>
+  <img alt="Image title" src="../screen36.png" width="900" />
+<br />
+<figcaption>Скриншот 36.</figcaption>
+</figure>
+<p>Добавим третью ноду по такому же принципу. Скопируем уже готовую команду, которую вводили на предыдущей ноде. </p>
+<figure>
+  <img alt="Image title" src="../screen37.png" width="900" />
+<br />
+<figcaption>Скриншот 37.</figcaption>
+</figure>
+<hr />
+<h2 id="_10"><strong>настройка сетевых ролей зарегистрированных серверов</strong></h2>
+<p>Следующий наш шаг — это настройка сетевых ролей нод, которую надо выполнить также, как и на первой ноде.</p>
+<figure>
+  <img alt="Image title" src="../screen38.png" width="900" />
+<br />
+<figcaption>Скриншот 38.</figcaption>
+</figure>
+<h2 id="_11"></h2>
+<h2 id="_12"><strong>добавление зарегистрированных серверов в кластер</strong></h2>
+<p>После завершения настройки сетевых ролей новых нод добавим их в кластер, настроив дисковые роли аналогично первой ноде. Для этого перейдем в ноду и нажмём «<strong>Join Cluster</strong>».</p>
+<p>Автоматически подхватится нужный интерфейс, который используется для сети хранилища, перейдем в дополнительные настройки, зададим их так же, как и на первой ноде, и дождемся присоединения второй ноды к нашему кластеру. Обновим страницу при необходимости. </p>
+<p>После добавления второй ноды в кластер проверим дисковые роли. Теперь можно добавить третью ноду в кластер аналогичным способом.</p>
+<figure>
+  <img alt="Image title" src="../screen39.png" width="900" />
+<br />
+<figcaption>Скриншот 39.</figcaption>
+</figure>
+<h2 id="_13"></h2>
+<h2 id="_14"><strong>создание кластерного датастора для виртуальных сред</strong></h2>
+<p>После того, как добавлены все ноды в кластер как на скриншоте 39, можно приступить к созданию датастора. </p>
+<figure>
+  <img alt="Image title" src="../screen40.png" width="900" />
+<br />
+<figcaption>Скриншот 40.</figcaption>
+</figure>
+<p>Нажмем на вкладку сервисы, выберем подпункт “<strong>Compute</strong>”, и в открывшемся окне нажмем на кнопку “<strong>add datastore</strong>”.</p>
+<figure>
+  <img alt="Image title" src="../screen41.png" width="900" />
+<br />
+<figcaption>Скриншот 41.</figcaption>
+</figure>
+<p>В поле “<strong>Name</strong>” зададим имя нашего датастора, в нашем случае будет <strong>ds0</strong>. В графе “<strong>Tier</strong>” выберем уровень, на котором будет создан этот датастор. Здесь согласно ранее заданным настройкам два уровня: “<strong>Tier 0</strong>” и “<strong>Tier 1</strong>”. </p>
+<p>Этот датастор будет создан для уровня “<strong>Tier 0</strong>”. Область отказа остается по умолчанию с параметром хост. При создании датастора надо выбрать один из двух типов избыточности: кодирование или репликация.</p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>Кодирование, представляет собой <strong>EC</strong> по типу <strong>RAID 6</strong> и больше подходит для неструктурированных данных таких как: медиа данные, видеопотоки (видеонаблюдение), для резервного копирования или для виртуальных сред с низким вводом выводом не желе чем Репликация. </p>
+<p>Репликация используется для высоконагруженных виртуальных сред, виртуальных машин, контейнеров, а вид репликации зависит от количества узлов в кластере. </p>
+<p>В пяти узловом кластере можно использовать <strong>реплику 3</strong>, в кластерах из четырех и трех узлов подходит <strong>реплика 2</strong>. </p>
+</details>
+<p>В нашем случае будет выбрана репликация в качестве избыточности, и так как этот кластер состоит из трех узлов, будет выбрана реплика 2. Создадим датастор с заданными параметрами, и создадим сразу еще один аналогичный, но для уровня 1.</p>
+<figure>
+  <img alt="Image title" src="../screen42.png" width="900" />
+<br />
+<figcaption>Скриншот 42.</figcaption>
+</figure>
+<p>В столбце <strong>Tier</strong> видно на скриншоте 42, что датасторы созданы для разных уровней: для уровня 0 и для уровня 1, и видно какой тип избыточности выбран для каждого датастора.</p>
+<hr />
+<h2 id="-_2"><strong>начало работы с панелью Р-Виртуализации</strong></h2>
+<p>На этом этапе настройки в панели управления <strong>Р-хранилища</strong> выполнены, теперь перейдем в панель управления виртуализацией как на следующем скриншоте 43. Для этого в адресной строке браузера введем ее <strong>IP</strong>-адрес, который указывали на этапе установки. Порт можно не указывать, он подхватится автоматически. Для входа используется также пользователь root с паролем, который задавался на этапе установки.</p>
+<figure>
+  <img alt="Image title" src="../screen43.png" width="900" />
+<br />
+<figcaption>Скриншот 43.</figcaption>
+</figure>
+<figure>
+  <img alt="Image title" src="../screen44.png" width="900" />
+<br />
+<figcaption>Скриншот 44.</figcaption>
+</figure>
+<p>В панели управления <strong>Р-виртуализации</strong> видно, что отображается только одна из трех наших нод, это видно в верхней части <strong>web</strong>-интерфейса во вкладке инфраструктура.</p>
+<hr />
+<h2 id="-_3"><strong>регистрация серверов в панели Р-Виртуализации</strong></h2>
+<p>Зарегистрируем оставшиеся две ноды. Для этого в верхней части <strong>web</strong>-интерфейса нажмем кнопку "<strong>добавить</strong>" и выберем пункт "<strong>физический сервер</strong>".</p>
+<figure>
+  <img alt="Image title" src="../screen45.png" width="900" />
+<br />
+<figcaption>Скриншот 45.</figcaption>
+</figure>
+<p>В поле "<strong>адрес сервера</strong>" указывается <strong>IP</strong>-адрес сети управления добавляемой ноды, который присваивался на этапе установки. В нашей конфигурации это 12.5. И укажем пользователя root и пароль. </p>
+<p>Внутри вкладки «<strong>инфраструктура</strong>» появится вторая нода. Повторим еще раз эту процедуру для регистрации третьей ноды.</p>
+<figure>
+  <img alt="Image title" src="../screen46.png" width="900" />
+<br />
+<figcaption>Скриншот 46.</figcaption>
+</figure>
+<hr />
+<h2 id="-_4"><strong>установка лицензии для Р-Виртуализации на серверах</strong></h2>
+<p>После регистрации всех нод кластера в панели управления виртуализации надо установить лицензию на нодах. Для этого перейдем во вкладку "<strong>настройка</strong>" и выберем пункт "<strong>управление лицензиями</strong>". </p>
+<figure>
+  <img alt="Image title" src="../screen47.png" width="900" />
+<br />
+<figcaption>Скриншот 47.</figcaption>
+</figure>
+<p>Лицензию для первого узла была установлена ранее, осталось установить для второго и третьего узлов. Для этого нажмем кнопку "<strong>установить файл лицензии</strong>".</p>
+<figure>
+  <img alt="Image title" src="../screen48.png" width="900" />
+<br />
+<figcaption>Скриншот 48.</figcaption>
+</figure>
+<p>Далее нажмем на ссылку второй ноды <strong>n2</strong>.</p>
+<figure>
+  <img alt="Image title" src="../screen49.png" width="900" />
+<br />
+<figcaption>Скриншот 49.</figcaption>
+</figure>
+<p>Выберем файл лицензии, затем нажмем "<strong>далее</strong>" и "<strong>установка</strong>".</p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>Обратите внимание, что после установки лицензии на ноду красный восклицательный знак рядом с названием ноды во вкладке инфраструктура пропадает. </p>
+</details>
+<figure>
+  <img alt="Image title" src="../screen50.png" width="900" />
+<br />
+<figcaption>Скриншот 50.</figcaption>
+</figure>
+<p>Повторим эту процедуру для третьей ноды. Далее развернем содержимое дерева наших нод. Видим, что третья и вторая ноды пустые, а на первой два контейнера панели управления виртуализацией и хранилищем.</p>
+<hr />
+<h2 id="_15"><strong>настройка хранения виртуальных сред в датасторе</strong></h2>
+<p>Сейчас они хранятся локально на первой ноде и в единственном экземпляре, а для обеспечения избыточности они должны храниться в датасторе, который создавался ранее. Чтобы изменить эту настройку, выберем первую ноду, нажмем на кнопку "<strong>настроить</strong>" и выберем пункт "<strong>настройки Хоста для виртуальных сред</strong>" как на скриншоте 51.</p>
+<figure>
+  <img alt="Image title" src="../screen51.png" width="900" />
+<br />
+<figcaption>Скриншот 51.</figcaption>
+</figure>
+<p>Изменим папки для виртуальных машин и контейнеров, выбрав пункт Р-хранилище, и далее выберем нужный нам датастор. Далее необходимо поставить галочку рядом с пунктом "<strong>попытаться применить данные настройки ко всем физическим серверам, подключенным к этому узлу управления</strong>". Это для того, чтобы заданные настройки распространились на все узлы кластера, и потом нажимаем OK.</p>
+<figure>
+  <img alt="Image title" src="../screen52.png" width="900" />
+<br />
+<figcaption>Скриншот 52.</figcaption>
+</figure>
+<p>Все заданные настройки у нас применятся ко всем узлам кластера, и теперь все виртуальные среды, то есть виртуальные машины и контейнеры, которые будут создаваться, уже будут создаваться непосредственно в датасторе. </p>
+<figure>
+  <img alt="Image title" src="../screen53.png" width="900" />
+<br />
+<figcaption>Скриншот 53.</figcaption>
+</figure>
+<hr />
+<h2 id="_16"><strong>перемещение контейнеров управления в датастор</strong></h2>
+<p>Теперь, чтобы два контейнера управления “<strong>va-mn</strong>”(<strong>Р-управление</strong>) и “<strong>vstorage-ui</strong>”(<strong>Р-хранилище</strong>) переехали с локального расположения в кластерную точку монтирования, то есть в указанный датастор, надо их мигрировать на другую ноду.</p>
+<figure>
+  <img alt="Image title" src="../screen54.png" width="900" />
+<br />
+<figcaption>Скриншот 54.</figcaption>
+</figure>
+<p>Для этого в верхней части выберем пункт "<strong>виртуальные среды</strong>", выделим оба наших контейнера и нажмем на кнопку "<strong>мигрировать</strong>", например можно на вторую ноду.</p>
+<p>Нажмем "<strong>подробности</strong>" для мониторинга выполнения миграции и дождемся завершения выполнения процесса.</p>
+<figure>
+  <img alt="Image title" src="../screen55.png" width="900" />
+<br />
+<figcaption>Скриншот 55.</figcaption>
+</figure>
+<p>Для этого в верхней части выберем пункт "<strong>виртуальные среды</strong>", выделим оба наших контейнера и нажмем на кнопку "<strong>мигрировать</strong>", например можно на вторую ноду.</p>
+<figure>
+  <img alt="Image title" src="../screen56.png" width="900" />
+<br />
+<figcaption>Скриншот 56.</figcaption>
+</figure>
+<hr />
+<h2 id="_17"><strong>запуск службы отказоустойчивости на серверах</strong></h2>
+<p>Далее, чтобы при отказе работы ноды виртуальные среды с нее автоматически возобновляли свою работу на другой исправной ноде, необходимо запустить службу отказоустойчивости “<strong>Shaman</strong>” на всех узлах кластера.</p>
+<p>Для этого надо подключиться к нодам по <strong>SSH</strong> и выполнить определенную команду: 
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">     </span><span class="c1">#hastart -c c01 -n 192.168.22.0/24</span>
+</span></code></pre></div>
+Значения команды выглядят следующим образом: после ключа <strong>-c</strong> надо указать имя кластера, в нашем случае это <strong>c01</strong>, и после ключа <strong>-n</strong> указать сеть хранилища, в нашем случае это <strong>192.168.22.0/24</strong> - именно сеть хранилища.</p>
+<figure>
+  <img alt="Image title" src="../screen57.png" width="900" />
+<br />
+<figcaption>Скриншот 57.</figcaption>
+</figure>
+<p>Если команда выполнена, то служба на первой ноде запуститься. Скопируем ее и выполним на оставшихся узлах, после чего в выводе команды видны все три узла, их адреса, статус, и видим, что из ресурсов есть только два контейнера, отображаются их <strong>ID</strong>, ниже видим <strong>IP</strong>-адреса нод, на которых они находятся. Видим, что здесь это вторая нода. Теперь если какая-либо нода выйдет из строя, работа виртуальных сред автоматически будет возобновлена на других исправных нодах.</p>
+<p>Проверка статуса службы <strong>HA</strong> “<strong>shaman</strong>” выполняется следующей командой на любой ноде: 
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">     </span><span class="c1">#shaman stat </span>
+</span></code></pre></div></p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>Если в процессе инсталяции кроме датасторов для виртуализации настраивалась роль экспорта <strong>iSCSI</strong> или <strong>s3</strong> на сетевых интерфейсах для внешних систем, то служба “<strong>shaman</strong>” автоматический запустится и выполнять команду <strong>hastart</strong> не потребуется.</p>
+</details>
+<figure>
+  <img alt="Image title" src="../screen58.png" width="900" />
+<br />
+<figcaption>Скриншот 58.</figcaption>
+</figure>
+<hr />
+<h2 id="_18"><strong>создание виртуальных сред</strong></h2>
+<p>Теперь можно перейти к созданию виртуальных сред. Создадим для примера две виртуальные машины с: <strong>Windows Server 2019</strong> и <strong>Ubuntu</strong>.    </p>
+<p>Будет выполняться установка с <strong>iso</strong>-образов, которые были предварительно загружены на первую ноду через программу <strong>SCP</strong> в папку <strong>root</strong>. Для создания виртуальной машины нажмем кнопку "<strong>добавить</strong>", выберем пункт "<strong>виртуальная среда</strong>".</p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>имеется несколько вариантов расположения <strong>ISO</strong> образов для запуска установки гостевых операционных систем: 1. В “<strong>Р-управлении</strong>” в разделе “<strong>библиотеки ресурсов</strong>” с предварительно настроенной внешней “<strong>shared</strong>” папкой по проколу <strong>CIFS/SMB</strong>. 2. Папка с расположением в датасторе “<strong>Р-хранилища</strong>” или в папке с расположением самой виртуальной среды (использует полезное пространство “<strong>Р-хранилища</strong>”). 3. Локальное расположение на ноде в папке пользователя по умолчанию root или в другой папке, но видимость зависит от прав. 4.Сетевое расположения с заранее настроенной смонтированной папкой от внешнего источника по <strong>NFS</strong>. 5.другие варианты.  </p>
+</details>
+<figure>
+  <img alt="Image title" src="../screen59.png" width="900" />
+<br />
+<figcaption>Скриншот 59.</figcaption>
+</figure>
+<p>Далее выберем в меню под добавить выберем "<strong>виртуальную машину</strong>", оставим первую ноду в графе выбора физического сервера, так как именно на нем <strong>iso</strong>-образы, нажмем "<strong>далее</strong>".</p>
+<figure>
+  <img alt="Image title" src="../screen60.png" width="900" />
+<br />
+<figcaption>Скриншот 60.</figcaption>
+</figure>
+<p>В качестве первой виртуальной машины будет установлена <strong>Windows Server 2019</strong>, поэтому назначим имя <strong>ws2019</strong> и в графе "<strong>гостевая операционная система</strong>" выберем соответствующий пункт. Во вкладке "<strong>удаленный доступ</strong>" выберем параметр «<strong>включено с настройками по умолчанию</strong>», и остальные настройки остаются без изменений, нажимаем кнопку "<strong>далее</strong>".</p>
+<figure>
+  <img alt="Image title" src="../screen61.png" width="900" />
+<br />
+<figcaption>Скриншот 61.</figcaption>
+</figure>
+<p>На этом этапе задаем аппаратную конфигурацию виртуальной машины, в настройках <strong>cd/dvd-rom</strong> указывается <strong>ISO</strong> образ. Нажмем кнопку "<strong>выбрать</strong>", откроем папку root и выберем образ <strong>Windows Server 2019</strong>, нажимаем "<strong>выбрать</strong>", затем нажимаем кнопку "<strong>создать</strong>".</p>
+<p>Можно нажать "<strong>подробности</strong>" для мониторинга выполнения операции и дождемся завершения создания виртуальной машины. Как создание виртуальной машины выполнено, она у нас появится на первой ноде. Если нажмем на нее и перейдем в “<strong>консоль</strong>”, запустится она автоматически сразу после создания, как и было задано в параметрах во время ее создания.</p>
+<figure>
+  <img alt="Image title" src="../screen62.png" width="900" />
+<br />
+<figcaption>Скриншот 62.</figcaption>
+</figure>
+<p>В консоли через браузер(по <strong>VNC</strong>) уже можно пройти процесс установки ОС. Если все прошло удачно, то повторим эту процедуру для создания еще одной виртуальной машины, но уже с <strong>Ubuntu</strong>. Где в графе "<strong>гостевая операционная система</strong>" сменим <strong>Windows</strong> на <strong>Linux</strong> и в уточняющей графе укажем <strong>Ubuntu Linux</strong>, все остальное делаем аналогично.</p>
+<figure>
+  <img alt="Image title" src="../screen63.png" width="900" />
+<br />
+<figcaption>Скриншот 63.</figcaption>
+</figure>
+<hr />
+<h2 id="vlan"><strong>создание VLAN и добавление в него виртуальных машин</strong></h2>
+<p>После того, как созданы виртуальные машины, можно создать виртуальную сеть и добавить виртуальные машины в определенный <strong>VLAN</strong>. Для этого сначала надо создать интерфейс <strong>VLAN</strong>.</p>
+<figure>
+  <img alt="Image title" src="../screen64.png" width="900" />
+<br />
+<figcaption>Скриншот 64.</figcaption>
+</figure>
+<p>Выберем первую ноду, перейдем во вкладку "<strong>сеть</strong>", и здесь во вкладке "<strong>сетевые адаптеры</strong>" нажмем на кнопку "<strong>новый интерфейс VLAN</strong>".</p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p><strong>VLAN</strong> теги должны быть предварительно настроенные на физических коммутаторах, которые подключены к серверам, где один из <strong>VLAN</strong> будет использоваться для сети управления и панелей “<strong>Р-управления</strong>” и “<strong>Р-хранилища</strong>”, а остальные уже под ваши задачи. </p>
+</details>
+<figure>
+  <img alt="Image title" src="../screen65.png" width="900" />
+<br />
+<figcaption>Скриншот 65.</figcaption>
+</figure>
+<p>Тег <strong>VLAN</strong> для примера <strong>130</strong>. В качестве базового интерфейса используется <strong>Bond</strong> сети управления. В нашем случае <strong>mb0</strong>, нажимаем <strong>OK</strong>.</p>
+<figure>
+  <img alt="Image title" src="../screen66.png" width="900" />
+<br />
+<figcaption>Скриншот 66.</figcaption>
+</figure>
+<p>После того как создался новый сетевой адаптер, под называнием <strong>mb0.130</strong>. Он аналогичен тому названию, которое задали на этапе установки для создания интерфейса <strong>VLAN 120</strong>, и дальнейшее администрирование будет происходить с названиями интерфейсов по такому же принципу.</p>
+<figure>
+  <img alt="Image title" src="../screen67.png" width="900" />
+<br />
+<figcaption>Скриншот 67.</figcaption>
+</figure>
+<p>Теперь перейдем во вкладку "<strong>виртуальные сети</strong>" и создадим виртуальную сеть для виртуальных машин. Нажмем на кнопку "<strong>новая виртуальная сеть</strong>".</p>
+<p>Назовем ее, например, <strong>VLAN130</strong>, в графе "<strong>назначить интерфейс</strong>" выберем "<strong>соединиться через mb0.130</strong>" и нажмем <strong>OK</strong>.</p>
+<figure>
+  <img alt="Image title" src="../screen68.png" width="900" />
+<br />
+<figcaption>Скриншот 68.</figcaption>
+</figure>
+<p>Нажмем "<strong>обновить</strong>", видна новая виртуальная сеть. Эту настройку надо выполнить на всех узлах кластера.</p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>на каждом узле необходимо только создать через “<strong>Р-управление</strong>” <strong>VLAN</strong> интерфейс и добавить к виртуальной сети, а виртуальная сеть автоматический создается на всех узлах.  Для того чтобы автоматизировать создание и привязку <strong>VLAN</strong> интерфейсов к виртуальных сетям на всех узлах можно воспользоваться документации с описанием <strong>cli</strong> команд: <a href="https://updates.rosplatforma.ru/docs/7.0.13/r-virt_cli.pdf">https://updates.rosplatforma.ru/docs/7.0.13/r-virt_cli.pdf</a> или написать в поддержку по адресу <strong>support@rosplatforma.ru</strong> с просьбой выдать готовый скрипт <strong>ansible</strong>. </p>
+</details>
+<figure>
+  <img alt="Image title" src="../screen69.png" width="900" />
+<br />
+<figcaption>Скриншот 69.</figcaption>
+</figure>
+<p>Теперь, чтобы добавить виртуальную машину в <strong>VLAN</strong>, нажмем на любую виртуальную машину.</p>
+<figure>
+  <img alt="Image title" src="../screen70.png" width="900" />
+<br />
+<figcaption>Скриншот 70.</figcaption>
+</figure>
+<p>Далее нажмем кнопку "<strong>настроить</strong>" и перейдем в настройки оборудования.</p>
+<figure>
+  <img alt="Image title" src="../screen71.png" width="900" />
+<br />
+<figcaption>Скриншот 71.</figcaption>
+</figure>
+<p>Выберем сетевой адаптер и в качестве виртуальной сети выберем нужную виртуальную сеть. Нажмем <strong>OK</strong>.</p>
+<p>Если в настоящий момент виртуальная машина работает, то для применения этой настройки потребуется ее перезагрузка. Поставим соответствующую галочку и еще раз нажмем <strong>OK</strong>.</p>
+<figure>
+  <img alt="Image title" src="../screen72.png" width="900" />
+<br />
+<figcaption>Скриншот 72.</figcaption>
+</figure>
+<p>Настройка применена, и теперь виртуальная машина <strong>Ubuntu 20.04.20</strong> находится в <strong>VLAN 130</strong>. После этого одна виртуальная машина находится в <strong>VLAN 120</strong>, вторая в <strong>VLAN 130</strong>. Настроим работу обоих виртуальных машин в <strong>VLAN 130</strong> и проверим сетевую доступность между ними.</p>
+<figure>
+  <img alt="Image title" src="../screen73.png" width="900" />
+<br />
+<figcaption>Скриншот 73.</figcaption>
+</figure>
+<p>В <strong>120 VLAN</strong> находится <strong>Windows Server 2019</strong>. Выберем его, нажмем «настроить» далее - вкладку «настройки оборудования», перейдем в сетевой адаптер и здесь сменим виртуальную сеть <strong>Bridged</strong>, которая в этом случае завязана на <strong>vlan 120</strong>, на виртуальную сеть <strong>vlan130</strong>, нажмем <strong>OK</strong>.</p>
+<figure>
+  <img alt="Image title" src="../screen74.png" width="900" />
+<br />
+<figcaption>Скриншот 74.</figcaption>
+</figure>
+<p>Для применения настроек потребуется перезагрузка ВМ, поставим галочку, ещё раз <strong>OK</strong> и ждем применения настройки.</p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>По умолчанию перезагрузка ВМ выполняется для корректного выключения гостевой операционной системы. Выполнить применение сетевых настроек на горячую (без перезагрузки) можно через команду <strong>cli</strong> описанную в следующей документации <a href="https://updates.rosplatforma.ru/docs/7.0.13/r-virt_cli.pdf">https://updates.rosplatforma.ru/docs/7.0.13/r-virt_cli.pdf</a></p>
+</details>
+<figure>
+  <img alt="Image title" src="../screen75.png" width="900" />
+<br />
+<figcaption>Скриншот 75.</figcaption>
+</figure>
+<hr />
+<h2 id="vlan_1"><strong>проверка сетевой доступности между виртуальными машинами одного vlan</strong></h2>
+<p>Итак, виртуальная машина перезагрузилась, теперь проверим сетевую доступность между этими виртуальными машинами. Перейдем в консоль, посмотрим <strong>IP</strong> адрес на <strong>Windows</strong> сервере. <strong>IP</strong> адрес - <strong>192.168.12.42</strong></p>
+<figure>
+  <img alt="Image title" src="../screen76.png" width="900" />
+<br />
+<figcaption>Скриншот 76.</figcaption>
+</figure>
+<p>Перейдем в <strong>ubuntu</strong> и попробуем запустить <strong>ping</strong>.</p>
+<p>Сетевая доступность есть, работает исправно как показано на скриншоте 76. Можно попробовать проверить работу миграции виртуальных сред с одного узла на другой.</p>
+<figure>
+  <img alt="Image title" src="../screen77.png" width="900" />
+<br />
+<figcaption>Скриншот 77.</figcaption>
+</figure>
+<hr />
+<h2 id="_19"><strong>проверка живой миграции виртуальных сред</strong></h2>
+<p>Перейдем на первую ноду, выберем виртуальные среды. Будем мигрировать сразу две виртуальные машины, выделим их и нажмём кнопку мигрировать.</p>
+<figure>
+  <img alt="Image title" src="../screen78.png" width="900" />
+<br />
+<figcaption>Скриншот 78.</figcaption>
+</figure>
+<p>Выберем, например, третью ноду, нажимаем мигрировать и дождемся завершения миграции.</p>
+<figure>
+  <img alt="Image title" src="../screen79.png" width="900" />
+<br />
+<figcaption>Скриншот 79.</figcaption>
+</figure>
+<p>Видно, что первая надо теперь пустая, там ничего не отображается, и те две виртуальные машины, которые мигрировали на третью ноду, теперь отображаются как раз на 3 ноде.</p>
+<figure>
+  <img alt="Image title" src="../screen80.png" width="900" />
+<br />
+<figcaption>Скриншот 80.</figcaption>
+</figure>
+<p>Видно в консоли, что все, как было, так и осталось на обоих виртуальных машинах, все сохранено в таком состоянии, в каком было до запуска процесса миграции.</p>
+<figure>
+  <img alt="Image title" src="../screen81.png" width="900" />
+<br />
+<figcaption>Скриншот 81.</figcaption>
+</figure>
+<p>Кроме этого, можем проверить сетевую доступность после миграции.</p>
+<hr />
+<h2 id="_20"><strong>проверка восстановления работы виртуальных сред при аварийном выходе из строя сервера</strong></h2>
+<p>Далее желательно проверить восстановление работы виртуальных сред в случае аварийного выхода из строя ноды. Чтобы сымитировать эту ситуацию, будет выключаться сервер по питанию. Выключаться будет третья нода – <strong>n3</strong>. Для наглядности будут бесконечные пинги до этой ноды.</p>
+<figure>
+  <img alt="Image title" src="../screen82.png" width="900" />
+<br />
+<figcaption>Скриншот 82.</figcaption>
+</figure>
+<p>Откроем удаленную консоль через <strong>iLO</strong>(в зависимости от производителя сервера это может быть <strong>IPMI</strong>,<strong>BMC</strong> и т.д.). Для того, чтобы сымитировать подобную ситуацию, будет выполнена нештатная перезагрузка сервера через <strong>iLO</strong> по питанию.</p>
+<figure>
+  <img alt="Image title" src="../screen83.png" width="900" />
+<br />
+<figcaption>Скриншот 83.</figcaption>
+</figure>
+<p>Необходимо перейти во вкладку управления питанием и выполнить принудительную перезагрузку.</p>
+<figure>
+  <img alt="Image title" src="../screen84.png" width="900" />
+<br />
+<figcaption>Скриншот 84.</figcaption>
+</figure>
+<p>В консоли удаленного доступа видно, что пошла перезагрузка. Во время загрузки можно выбрать опцию старта <strong>Boot Menu</strong>, чтобы нода точно не загрузилась, и точно осталось состояние отсутствия доступа.</p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>В случае если сервер по какой-либо причине не имеет функции немедленного выключения питания или перезагрузки, или несмотря на то, что имеются кнопки, но все равно выполняется корректное выключение, то можно выполнить имитацию аварийного выключения с помощью следующей команды:
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">   </span><span class="c1">#echo c &gt; /proc/sysrq-trigger</span>
+</span></code></pre></div>
+после выполнения этой команды сервер уйдёт в аварийную перезагрузку и при необходимости для того, чтобы сервер после перезагрузки не вернулся обратно можно через консоль сервера (<strong>BMC\iLO\IPMI</strong>) выключить его. </p>
+</details>
+<figure>
+  <img alt="Image title" src="../screen85.png" width="900" />
+<br />
+<figcaption>Скриншот 85.</figcaption>
+</figure>
+<p>В панели управления “<strong>Р-виртуализации</strong>” видно, что третья нода начала отображаться как недоступная, и выполнилась эвакуация виртуальных машин с третьей ноды. <strong>Windows Server 2019</strong> переехал на вторую ноду, а <strong>ubuntu</strong> на первую ноду, и после эвакуации виртуальные машины работают штатно и полностью доступны.</p>
+<p>Можно также проверить статус службы <strong>HA</strong> c любого рабочего сервера следующей командой:
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">#shaman stat</span>
+</span></code></pre></div></p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>Подробнее ознакомится со статусами и сообщениями кластера “<strong>Р-хранилища</strong>” во время выхода из строя сервера можно из следующей документации :</p>
+<ol>
+<li>
+<p>Документация <strong>GUI</strong> <a href="https://updates.rosplatforma.ru/docs/7.0.13/r-stor_install_gui.pdf">https://updates.rosplatforma.ru/docs/7.0.13/r-stor_install_gui.pdf</a> страница 39.</p>
+</li>
+<li>
+<p>Документация <strong>CLI</strong> <a href="https://updates.rosplatforma.ru/docs/7.0.13/r-stor_install_cli.pdf">https://updates.rosplatforma.ru/docs/7.0.13/r-stor_install_cli.pdf</a> страница 84.</p>
+</li>
+<li>
+<p>Документация (<strong>shaman</strong>) <a href="https://updates.rosplatforma.ru/docs/7.0.13/r-virt_cli.pdf">https://updates.rosplatforma.ru/docs/7.0.13/r-virt_cli.pdf</a>   страница 144.</p>
+</li>
+</ol>
+</details>
+<hr />
+<h2 id="_21"><strong>настройка сети хранилища для обеспечения максимальной производительности</strong></h2>
+<p>Следующая важная настройка, которую желательно сделать на всех узлах кластера, для обеспечения максимальной производительности и отказоустойчивости - это установить на бонде сети хранилища параметр <strong>xmit_hash_policy</strong> со значением <strong>layer=3+4</strong>, а также задать значение <strong>mtu 9000</strong> как на самом бонде, так и на всех интерфейсах, которые в него входят(эти режимы должны поддерживаться на стороне физических коммутаторов и заранее настроены).</p>
+<figure>
+  <img alt="Image title" src="../screen86.png" width="900" />
+<br />
+<figcaption>Скриншот 86.</figcaption>
+</figure>
+<p>Текущее значение <strong>hash policy</strong> можно посмотреть, как на скриншоте 86 двумя командами:
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">#mncli c s sb1 | grep bond.options</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">#cat /proc/net/bonding/sb1 | grep Transmit</span>
+</span></code></pre></div>
+<strong>Sb1</strong> – это имя интерфейса для сети “<strong>Р-хранилища</strong>”. По умолчанию значение <strong>hash policy – layer2</strong>.</p>
+<figure>
+  <img alt="Image title" src="../screen87.png" width="900" />
+<br />
+<figcaption>Скриншот 87.</figcaption>
+</figure>
+<p>Далее необходимо проверить текущее значение <strong>mtu</strong> на бонде и на входящих в него интерфейсах как нас скриншоте 87. Текущее значение <strong>mtu 1500</strong>. Команда для проверки:
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">#ip a | grep sb1</span>
+</span></code></pre></div>
+Чтобы изменить значение этих параметров, надо открыть конфигурационный файл бонда сети “<strong>Р-хранилища</strong>”. Для этого можно выполнить следующую команду:
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">#vi /etc/sysconfig/network-scripts/ifcfg-sb1</span>
+</span></code></pre></div></p>
+<figure>
+  <img alt="Image title" src="../screen88.png" width="900" />
+<br />
+<figcaption>Скриншот 88.</figcaption>
+</figure>
+<p>Параметр <strong>hash policy</strong> указывается в графе <strong>bonding_opts</strong>, укажем его в самом конце. Важно не допустить синтаксических ошибок. Параметр <strong>mtu</strong> и его значение указываются в этом же файле отдельный графой, укажем его сразу после графы с префиксом.</p>
+<p>Значение параметра <strong>MTU</strong> применяется к самому бонду и ко всем входящим в него интерфейсам.</p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>Значение <strong>MTU</strong> на интерфейсах сети “<strong>Р-хранилища</strong>” можно также настраивать на этапе установки ОС гипервизора в инсталяторе, где была настройка <strong>sb1</strong> и его <strong>slave</strong> интерфейсов или как в нашем случае после установки ОС.</p>
+</details>
+<p>Далее сохраним файл. Если сразу после редактирования конфигурационного файла проверить текущее значение параметров, то будет видно, что изменения не применились.</p>
+<p>Чтобы изменения вступили в силу, надо выполнить перезагрузку бонда сети хранилища. Для этого выключим его и после небольшой паузы в 15-20 секунд снова включим.</p>
+<p>Выполнив следующие команды:
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># ifdown sb1</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># ifup sb1</span>
+</span></code></pre></div></p>
+<figure>
+  <img alt="Image title" src="../screen89.png" width="900" />
+<br />
+<figcaption>Скриншот 89.</figcaption>
+</figure>
+<p>Пример выполнения команд выключения и включения интерфейса для применения настроек. </p>
+<figure>
+  <img alt="Image title" src="../screen90.png" width="900" />
+<br />
+<figcaption>Скриншот 90.</figcaption>
+</figure>
+<p>Проверим значение наших параметров еще раз. Теперь настройки применились и вступили в силу.</p>
+<p>Как видно на скриншоте 90 параметры <strong>MTU</strong> заданы не только на интерфейсе <strong>sb1</strong>, но и на его <strong>slave</strong> интерфейсах, в конфигах которых также необходимо прописывать <strong>MTU</strong>.</p>
+<p>На этом основная настройка кластера завершена.</p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>В случае других сценариев и конфигурации использования Росплатформы таких как: нестандартное сетевое окружение; на каждую ноду большое количество дисков; растянутый кластер, дезагрегированный сценарий, <strong>s3</strong> георепликация и т.д.  необходимо выполнять дополнительные настройки такие как особая настройка: <strong>firewall</strong>, настройка локаций и доменов отказа, включение дополнительной отказоустойчивости <strong>cfgd</strong>, сетевая балансировка и т.д. Все это выполняется согласно документации <a href="https://docs.rosplatforma.ru/">https://docs.rosplatforma.ru/</a> или при консультации с <strong>support@rosplatforma.ru</strong></p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../deploy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2.Развертывание">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                2.Развертывание
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../diagnostics/" class="md-footer__link md-footer__link--next" aria-label="Next: 4.Проверка">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                4.Проверка
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "navigation.footer"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

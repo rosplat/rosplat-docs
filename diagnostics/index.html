@@ -1,0 +1,892 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://rosplat.github.io/rosplat-docs/diagnostics/">
+      
+      
+        <link rel="prev" href="../decryption/">
+      
+      
+        <link rel="next" href="../archi/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>4.Проверка - документация</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12.66%2013.67c-.34.33-.73.62-1.16.83V21l-2%202-2-2%202-1.71L8%2018l1.5-1.29-2-1.71v-.5a4.42%204.42%200%200%201-2.5-4C5%208%207%206%209.5%206h.11c-.02.07-.07.12-.11.18-.27.61-.42%201.25-.47%201.9A1.498%201.498%200%200%200%209.5%2011h.1c.64%201.25%201.74%202.2%203.06%202.67M16%206c0-.63-.1-1.25-.28-1.82%201.34.38%202.49%201.37%203.01%202.78.6%201.66.16%203.43-.98%204.63L20%2017.68l-1.22%202.57-2.56-1.2%201.28-2.29-1.84-.7.97-1.72-2.47-.93-.16-.46a4.48%204.48%200%200%201-3.73-2.91%204.51%204.51%200%200%201%202.69-5.77c.18-.06.37-.1.54-.14A3.95%203.95%200%200%200%2010%202C7.79%202%206%203.79%206%206c0%20.09%200%20.17.03.26-.33.27-.63.56-.88.89C5.06%206.78%205%206.4%205%206c0-2.76%202.24-5%205-5s5%202.24%205%205c0%201.16-.4%202.21-1.06%203.06C16.08%208.88%2016%206%2016%206m-3.19%202.1c.06.17.15.31.25.44.56-.66.91-1.5.94-2.43-.11.02-.2.04-.3.07-.78.29-1.2%201.15-.89%201.92%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/pdf.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="документация" class="md-header__button md-logo" aria-label="документация" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            документация
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4.Проверка
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="документация" class="md-nav__button md-logo" aria-label="документация" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    документация
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.Подготовка
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.Развертывание
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../decryption/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.По шагам
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    4.Проверка
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.Проверка
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Установка fio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Создание дериктории
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Загрузка профилей
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fio_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Запуск сервера fio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Редактирование профилей
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Создание datasets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Пример:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Показатели
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Параметры профилей
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Пример профиля
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.Архитектура
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Установка fio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Создание дериктории
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Загрузка профилей
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fio_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Запуск сервера fio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Редактирование профилей
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Создание datasets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Пример:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Показатели
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Параметры профилей
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Пример профиля
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1"><strong>Проверка корректности настроек кластера и работоспособности серверного оборудования.</strong></h1>
+<p>Для это потребуется <strong>fio</strong> установленный на всех нодах, а также профили для него.</p>
+<h4 id="fio">Установка fio</h4>
+<p>1) Для начала необходимо установить <strong>fio</strong> на всех нодах кластера:  </p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># yum install fio -y</span>
+</span></code></pre></div>
+<h4 id="_2">Создание дериктории</h4>
+<div style="text-align: justify">
+<p>2) Создаем директорию в “<strong>Р-хранилище</strong>”, которая будет использоваться для тестов (стандартный путь в профилях - <strong>/mnt/vstorage/benchmark_dir</strong>)</p>
+</div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># mkdir /mnt/vstorage/benchmark_dir</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># vstorage -c &lt;наименование кластера&gt; set-attr -R /mnt/vstorage/benchmark_dir replicas=2 tier=0</span>
+</span></code></pre></div>
+<div style="text-align: justify">
+<p>С помощью этой команды мы устанавливаем какой уровень хранилища и тип репликации данных нужно протестировать. <strong>Tier</strong> - задает уровень. Для указания репликации используется два варианта - <strong>replicas</strong> для реплики. <strong>encoding</strong> для кодирования. Есть следующие возможные варианты:</p>
+</div>
+<ul>
+<li><strong>replicas=1</strong></li>
+<li><strong>replicas=2</strong></li>
+<li><strong>replicas=3</strong></li>
+<li><strong>encoding=1+0</strong></li>
+<li><strong>encoding=1+2</strong></li>
+<li><strong>encoding=3+2</strong></li>
+<li><strong>encoding=5+2</strong></li>
+<li><strong>encoding=7+2</strong></li>
+<li><strong>encoding=17+3</strong></li>
+</ul>
+<p>Для проверки кодирования 3+2 на дисках 0 уровня, нужно будет запустить следующую команду:
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># vstorage -c &lt;наименование_кластера&gt; -R /mnt/vstorage/benchmanr_dir encoding=3+2 tier=0</span>
+</span></code></pre></div></p>
+<h4 id="_3">Загрузка профилей</h4>
+<p>3)Скачиваем профили <strong>fio</strong>, и сохраняем их на ноде, с которой будет запущен тест <strong>fio</strong>. Ссылка на профили будет в конце письма.</p>
+<h4 id="fio_1">Запуск сервера fio</h4>
+<p>4)Запускаем <strong>fio</strong> сервер на всех нодах кластера</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># fio --server</span>
+</span></code></pre></div>
+<div style="text-align: justify">
+<p>Будет запущен сервер <strong>fio</strong>, который будет использовать стандартный порт <strong>8765</strong>, поэтому так же необходимо открыть доступ к нему по сети, например с помощью <strong>iptables</strong>.</p>
+</div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># iptables -I INPUT -p tcp -m tcp -m multiport --dports 8765 -j ACCEPT</span>
+</span></code></pre></div>
+<h4 id="_4">Редактирование профилей</h4>
+<div style="text-align: justify">
+<p>5) Отредактировать все файлы профилей согласно указанным инструкциям внутри файлов.
+<strong>size</strong> - должен быть равен двукратному размеру оперативной памяти на ноде.
+<strong>numjobs</strong> - количество ядер процессора. В случае если включен <strong>Hyper Threading</strong>, то указываем количество потоков.</p>
+<h4 id="datasets">Создание datasets</h4>
+<p>6) Создаем <strong>dataset</strong>'ы. Команду запускаем из папки, где находятся профили <strong>fio</strong>.</p>
+</div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">#for N in {&lt;node1&gt;,&lt;node2&gt;,&lt;node3&gt;,...,&lt;nodeN&gt;}; do fio --client=$N prepare-set.fio;done </span>
+</span></code></pre></div>
+<div style="text-align: justify">
+<p>Выполнения команды может занять несколько минут. На этом подготовительный этап завершен. Для запуска теста необходимо запустить следующую команду:</p>
+</div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># fio --client=&lt;node1&gt; seqread.fio --client=&lt;node2&gt; seqread.fio [...]</span>
+</span></code></pre></div>
+<div style="text-align: justify">
+<p>Количество клиентов равно количеству нод в кластере, вместо значения <strong>nodeN</strong> используем <strong>IP</strong> адрес ноды.</p>
+</div>
+<div class="annotate">
+<ul>
+<li><strong>seqread.fio</strong> - имя профиля. (1)</li>
+<li><strong>seqread.fio</strong> - последовательное чтение.</li>
+<li><strong>randread.fio</strong> - случайное чтение.</li>
+<li><strong>seqwrite.fio</strong> - последовательная запись</li>
+<li><strong>randwrite.fio</strong> - случайная запись</li>
+<li><strong>randrw.fio</strong> - случайные чтение и запись</li>
+<li><strong>expand.fio</strong> - последовательная запись в постоянно растущий файл, например, файлы резрвных копий, базы данных и т.д.</li>
+</ul>
+</div>
+<ol>
+<li><img alt="🙋" class="twemoji heart" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f64b.svg" title=":person_raising_hand:" /> вид теста</li>
+</ol>
+<p><a href="https://disk.yandex.ru/d/YJLkBtLDVdd83g">Ссылка для скачивания профилей</a></p>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>Если узлы кластера имеют кэши <strong>SSD/NVMe</strong>, убедитесь, что они очищены перед запуском любого профиля. Проверить кэши или журналы записи можно следующим образом:
+1. На узле кластера запустите
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># vstorage -c &lt;наименование_кластера&gt; top</span>
+</span></code></pre></div>
+2. Находясь на текстовой панели инструментов, нажмите на клавиатуре «<strong>с</strong>», чтобы развернуть вкладку блоков, а затем прокрутите столбцы с помощью клавиши «<strong>i</strong>».
+пока не увидите столбцы <strong>JRN_FULL</strong> и <strong>s</strong>.
+3. Подождите, пока <strong>JRN_FULL</strong> не станет равным <strong>0%</strong>, а каждый идентификатор <strong>CS</strong> будет помечен флагом c, например, «<strong>JCc</strong>». Это может занять некоторое время, когда кластер не находится под нагрузкой ввода-вывода.</p>
+</details>
+<div style="text-align: justify">
+<p>По завершению теста <strong>fio</strong> отобразит результаты выполнения команды бенчмаркинга. Чем больше узлов участвует в тесте, тем больше результатов выдаст <strong>fio</strong>. Тем не менее, резюме будет предоставлено в конце, обозначенном слова «<strong>All clients</strong>». </p>
+</div>
+<h4 id="_5">Пример:</h4>
+<figure>
+  <img alt="Image title" src="../allclients.png" width="900" />
+<br />
+<figcaption></figcaption>
+</figure>
+<p>Это пример выходных данных задания <strong>randrw.fio</strong> (случайное чтение/запись), выполняемого на кластере <strong>all-flash</strong> из пяти узлов.</p>
+<h4 id="_6">Показатели</h4>
+<div style="text-align: justify">
+<p>Основными метриками для случайного чтения/записи являются <strong>IOPS</strong> (операции чтения записи в секунду) и пропускная способность (<strong>bw</strong>):</p>
+</div>
+<figure>
+  <img alt="Image title" src="../readwrite.png" width="900" />
+<br />
+<figcaption></figcaption>
+</figure>
+<div style="text-align: justify">
+<p>Обратите внимание на <strong>IOPS</strong> при тестировании случайных рабочих нагрузок и наблюдайте за пропускной способностью при тестировании последовательных операций. При тестировании случайных операций чтения/записи также обратите внимание на параметр <strong>iodepth</strong>, который указывает сколько запросов поставлено в очередь и сколько ожидает.</p>
+</div>
+<p>Кроме того:</p>
+<div style="text-align: justify">
+<ul>
+<li><strong>slat</strong> — это задержка отправки, которая указывает, сколько времени потребовалось для отправки ввода-вывода ядру.</li>
+<li><strong>clat</strong> — задержка завершения, показывающая, сколько времени прошло между отправкой в ядро и завершение ввода-вывода (исключая задержку отправки).</li>
+<li><strong>lat</strong> – это сумма <strong>slat</strong> и <strong>clat</strong>.</li>
+</ul>
+</div>
+<details class="success" open="open">
+<summary>Важно!</summary>
+<p>Результаты показаний особенно профиля последовательной записи приблизительно должны совпадать с суммой скорости записи всех дисков с ролью хранения или с ролью кэш минус расходы на реплику (задержка в сети хранилища) для одной ноды. Если результаты сильно разнятся необходимо проверять на корректность настроек кластера, а также корректность работы серверного оборудования. В случае если затрудняетесь проверить самостоятельно, то для такой проверки лучше обратится в поддержку Росплатформы <strong>support@rosplatforma.ru</strong>. </p>
+</details>
+<h4 id="_7">Параметры профилей</h4>
+<div style="text-align: justify">
+<p>В следующих разделах перечислены профили, которые доступны для упрощения сравнительного анализа. Каждый профиль содержит ряд параметров (на примере <strong>randread.fio</strong>):</p>
+</div>
+<p>Сценарий <strong>fio</strong>. В данном случае случайные чтения:</p>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="l l-Scalar l-Scalar-Plain">rw=randread</span><span class="w"> </span>
+</span></code></pre></div>
+Размер набора данных. Должен быть как минимум в два раза больше оперативной памяти:</p>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="l l-Scalar l-Scalar-Plain">size=8g</span>
+</span></code></pre></div>
+Количество параллельных задач. Должно быть равно количеству ядер процессора:</p>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="l l-Scalar l-Scalar-Plain">numjobs=16</span><span class="w"> </span>
+</span></code></pre></div>
+Размер блока данных:</p>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="l l-Scalar l-Scalar-Plain">bs=4к</span>
+</span></code></pre></div>
+Асинхронная библиотека. Требуется параметр «<strong>direct=1</strong>»:</p>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="l l-Scalar l-Scalar-Plain">ioengine=libaio</span>
+</span></code></pre></div>
+Глубина очереди для асинхронных запросов:</p>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="l l-Scalar l-Scalar-Plain">iodepth=32</span>
+</span></code></pre></div>
+Ограничивает работу сценария <strong>fio</strong> по времени, а не по выполнению сценарий определенное количество раз. Сценарий будет выполнен столько раз, сколько успеет за определенный «<strong>runtime</strong>»:</p>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="l l-Scalar l-Scalar-Plain">time_based</span>
+</span></code></pre></div>
+Длительность сценария (по умолчанию в секундах):</p>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="l l-Scalar l-Scalar-Plain">runtime=60</span>
+</span></code></pre></div>
+Этот параметр заставляет данные записываться непосредственно на диск без кэширования и позволяет измерять фактическую производительность записи на диск:</p>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="l l-Scalar l-Scalar-Plain">direct=1</span>
+</span></code></pre></div>
+Формат имени файла. В данном случае это зависит от количества задач:</p>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="l l-Scalar l-Scalar-Plain">filename_format=__testfile’$jobnum’</span>
+</span></code></pre></div>
+Тип задачи. Если не установлено, вместо потоков будут создаваться процессы:</p>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="l l-Scalar l-Scalar-Plain">thread</span>
+</span></code></pre></div>
+Целевой каталог для набора данных:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="l l-Scalar l-Scalar-Plain">directory=/mnt/vstorage/benchmark_dir</span>
+</span></code></pre></div>
+<h4 id="_8">Пример профиля</h4>
+<p>Ниже пример профайла, где необходимо вставить размер памяти в соответствии с конфигурацией оборудования:</p>
+<p><div class="language-yaml highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p p-Indicator">[</span><span class="nv">seqwrite</span><span class="p p-Indicator">]</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="l l-Scalar l-Scalar-Plain">rw=write</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="l l-Scalar l-Scalar-Plain">size=2x&lt;RAM&gt;/&lt;CPU_cores&gt;</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="l l-Scalar l-Scalar-Plain">numjobs=&lt;CPU_cores&gt;</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="l l-Scalar l-Scalar-Plain">bs=1m</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="l l-Scalar l-Scalar-Plain">ioengine=libaio</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="l l-Scalar l-Scalar-Plain">iodepth=32</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="l l-Scalar l-Scalar-Plain">time_based</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="l l-Scalar l-Scalar-Plain">runtime=60</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="l l-Scalar l-Scalar-Plain">direct=1</span>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="l l-Scalar l-Scalar-Plain">filename_format=__testfile&#39;$jobnum&#39;</span>
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="l l-Scalar l-Scalar-Plain">thread</span>
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="l l-Scalar l-Scalar-Plain">directory=/mnt/vstorage/benchmark_dir</span>
+</span></code></pre></div>
+Укажите требуемый размер и значения <strong>numjobs</strong> в каждом профиле задания узла:</p>
+<ul>
+<li>размер как минимум в два раза больше оперативной памяти узла, разделенного на количество ядер процессора узла,</li>
+<li><strong>numjobs</strong> — количество ядер ЦП узла.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Примечание:</p>
+<p>Если <strong>Hyper-Threading</strong> включен, вместо этого используйте число потоков ЦП. Цель - полностью загрузить ЦП, но не под 100%. </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../decryption/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3.По шагам">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                3.По шагам
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../archi/" class="md-footer__link md-footer__link--next" aria-label="Next: 5.Архитектура">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                5.Архитектура
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "navigation.footer"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

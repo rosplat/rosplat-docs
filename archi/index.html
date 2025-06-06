@@ -1,0 +1,828 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://rosplat.github.io/rosplat-docs/archi/">
+      
+      
+        <link rel="prev" href="../diagnostics/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>5.Архитектура - документация</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12.66%2013.67c-.34.33-.73.62-1.16.83V21l-2%202-2-2%202-1.71L8%2018l1.5-1.29-2-1.71v-.5a4.42%204.42%200%200%201-2.5-4C5%208%207%206%209.5%206h.11c-.02.07-.07.12-.11.18-.27.61-.42%201.25-.47%201.9A1.498%201.498%200%200%200%209.5%2011h.1c.64%201.25%201.74%202.2%203.06%202.67M16%206c0-.63-.1-1.25-.28-1.82%201.34.38%202.49%201.37%203.01%202.78.6%201.66.16%203.43-.98%204.63L20%2017.68l-1.22%202.57-2.56-1.2%201.28-2.29-1.84-.7.97-1.72-2.47-.93-.16-.46a4.48%204.48%200%200%201-3.73-2.91%204.51%204.51%200%200%201%202.69-5.77c.18-.06.37-.1.54-.14A3.95%203.95%200%200%200%2010%202C7.79%202%206%203.79%206%206c0%20.09%200%20.17.03.26-.33.27-.63.56-.88.89C5.06%206.78%205%206.4%205%206c0-2.76%202.24-5%205-5s5%202.24%205%205c0%201.16-.4%202.21-1.06%203.06C16.08%208.88%2016%206%2016%206m-3.19%202.1c.06.17.15.31.25.44.56-.66.91-1.5.94-2.43-.11.02-.2.04-.3.07-.78.29-1.2%201.15-.89%201.92%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/pdf.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="документация" class="md-header__button md-logo" aria-label="документация" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            документация
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5.Архитектура
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="документация" class="md-nav__button md-logo" aria-label="документация" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    документация
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.Подготовка
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.Развертывание
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../decryption/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.По шагам
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagnostics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.Проверка
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.Архитектура
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>5.Архитектура</h1>
+
+<div class="noprint">
+
+<div style="margin-left: 8%;height: 100px;display: flex;justify-content: space-between;">
+<input type="checkbox" id="animationToggle2" class="hidden-checkbox">
+<label for="animationToggle2" class="toggle-button">Реплика 2</label>
+<input type="checkbox" id="animationToggle3" class="hidden-checkbox">
+<label for="animationToggle3" class="toggle-button">Реплика 3</label>
+<input type="checkbox" id="animationToggle3Alt" class="hidden-checkbox">
+<label for="animationToggle3Alt" class="toggle-button">EC 2+1</label>
+</div><div style="flex-shrink: 0;wigth: 800px;display: flex;justify-content: space-between;margin-bottom: 5%;margin-left: 18%;">
+         <div style="margin-left: 4%;wigth: 267px;flex-shrink: 0;">
+         оригинальный блок
+         <div class="notes cube-1-4"></div>
+         копия блока
+         <div class="notes cube-2-5"></div></div>
+         <div style="wigth: 267px;flex-shrink: 0;margin-left: 4%;">
+         вторая копия
+         <div class="notes cube-3-6"></div>
+         оригинальный блок
+         <div class="notes cube-4-7"></div></div>
+      <div style="margin-right: 20%;wigth: 267px;flex-shrink: 0;margin-left: 4%;">
+         блок четности   
+         <div class="notes cube-5-8"></div>
+         общение <b>mds</b>
+         <div class="pulse-n"></div></div>
+         </div>
+<div class="container" id="animationContainer">
+        <!-- Источник данных (клиент) -->
+        <div class="storage source"><p class="textv">ВМ</p>
+         <div class="inner-client">гостевая ФС</div>
+        </div>
+        <div class="commutator"><p class="textc">ethernet коммутатор</p></div>
+        <!-- Три сервера хранилища -->
+        <div class="storage server1">
+         <p class="textb">сервер 1</p>
+          <div class="storage client">
+           <div class="storage qcow2">qcow2</div>
+            <p class="textk">клиент</p>
+          </div>
+          <div class="storage mds">mds1</div>
+         <div class="storage storage-1">Диск CS#1</div>
+        </div>
+        <!-- сервер 2 и 3 -->
+        <div class="storage server2">
+         <div class="storage mds">mds2</div>
+         <p class="textb">сервер 2</p>
+          <div class="storage storage-2">Диск CS#2</div>
+        </div>
+        <div class="storage server3">
+         <div class="storage mds">mds3</div>
+         <p class="textb">сервер 3</p>
+         <div class="storage storage-3">Диск CS#3</div>
+        </div>
+        <!-- Кубики (данные) -->
+        <div class="cube cube-1"></div>
+        <div class="cube cube-2"></div>
+        <div class="cube cube-3"></div>
+        <div class="connection-line line-1"></div>
+        <div class="connection-line line-2"></div>
+        <div class="connection-line line-3"></div>
+        <div class="connection-line line-4"></div>
+</div>
+</div>
+<p></br></p>
+<div class="noprint" style="text-align: center;">
+<p><strong>Анимационная схема, показывает минимальную </br>конфигурацию кластера Р-хранилища:</strong> </p>
+</div>
+<div class="noprint" style="text-align: justify;float: left;">
+<ol>
+<li><strong>ВМ с гостевой фс</strong> - это виртуальная машина внутри которой установлена гостевая операционная система с файловой системой. </li>
+<li><strong>qcow2</strong> - это файл или образ виртуального диска виртуальной машины. </li>
+<li><strong>mds1-3</strong> - это служба метаданных, которая содержит карту расположения блоков и контроллирует кворум. На каждом сервере по одной такой службе.  </li>
+<li><strong>Диск CS#1-3</strong> - это служба хранения блоков, каждая служба управляет одним диском. </li>
+<li><strong>клиент</strong> - служба или точка монтирования кластера Р-хранилища в которой хранятся файлы или 
+виртуальные диски виртуальных машин в виде файлов. Каждый файл расщепляется на блоки и их копии при операции записи. 
+Распределение блоков по серверам и их дискам осуществляется после того как службы mds согласуют карту и предоставят ее клиенту. </li>
+<li><strong>ethernet коммутатор</strong> - это сетевой коммутатор, который связывает по сети интерконнекта три сервера,
+образуя единую шину для передачи блоков и их копий данных. </li>
+<li>Над схемой размещены кнопки для включения определенного вида избыточности.  </li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">Примечание:</p>
+<p>На схеме всего три вида избыточности, но на самом деле их больше и в настройках платформы можно добавлять новые режимы. Освновные режимы описаны на главной страницы данной инструкции в разеделе "Расчет объема полезного хранения и количества узлов".</p>
+</div>
+</div>
+<script>
+    // Элементы управления
+    const toggle2 = document.getElementById('animationToggle2');
+    const toggle3 = document.getElementById('animationToggle3');
+    const toggle3Alt = document.getElementById('animationToggle3Alt');
+    const cubes = document.querySelectorAll('.cube');
+    // элементы для анимации импульса синхронизации mds
+    const pulseElements = {
+      client: document.querySelector('.storage.client'),
+      commutator: document.querySelector('.commutator'),
+      mds1: document.querySelector('.server1 .mds'),
+      mds2: document.querySelector('.server2 .mds'),
+      mds3: document.querySelector('.server3 .mds')
+    };
+
+    // Конфигурация анимаций
+    const animationConfig = {
+  rep2: { // Реплика 2
+    cubes: [0, 1], // Красный (0) и оранжевый (1)
+    sequences: [
+      // Итерация 1: Красный → CS#1, Оранжевый → CS#2
+      { targets: [0, 1], storage: [1, 2] },
+      // Итерация 2: Красный → CS#1, Оранжевый → CS#3
+      { targets: [0, 1], storage: [1, 3] },
+      // Итерация 3: Красный → CS#1, Оранжевый → CS#2
+      { targets: [0, 1], storage: [1, 2] }
+    ],
+    colors: ['#e74c3c', '#f39c12'],
+    // Новая настройка для смещения кубиков в хранилищах
+    offsets: {
+      1: { x: 0, y: 0 },    // CS#1 - базовое положение
+      2: { x: 180, y: 150 }, // CS#2
+      3: { x: 380, y: 150 }  // CS#3
+    }
+  },
+      rep3: { // Реплика 3
+        cubes: [0, 1, 2], // Все кубики
+        sequences: [
+          { targets: [0, 1, 2], storage: [1, 2, 3] },
+          { targets: [0, 1, 2], storage: [1, 3, 2] },
+          { targets: [0, 1, 2], storage: [1, 2, 3] }
+        ],
+        colors: ['#e74c3c', '#f39c12', '#f3ec12']
+      },
+      ec21: { // EC 2+1
+        cubes: [0, 1, 2],
+        sequences: [
+          { targets: [0, 1, 2], storage: [1, 2, 3], colors: ['#47ab19','#47ab19','#a2edf5'] },
+          { targets: [0, 1, 2], storage: [1, 3, 2], colors: ['#47ab19','#47ab19','#a2edf5'] },
+          { targets: [0, 1, 2], storage: [1, 2, 3], colors: ['#47ab19','#47ab19','#a2edf5'] }
+        ]
+      }
+    };
+
+    // Хранилище для накопленных кубиков
+    const accumulatedCubes = {
+      1: [], // CS#1
+      2: [], // CS#2
+      3: []  // CS#3
+    };
+
+    let currentMode = null;
+    let animationTimeout = null;
+    let currentAnimationId = 0; // Новая переменная для контроля анимаций
+
+
+    // Изначально все анимации выключены
+    resetAllCubes();
+
+    // Обработчик для кнопки "Реплика 2" (2 кубика)
+    toggle2.addEventListener('change', function() {
+        if (this.checked) {
+          currentAnimationId++;  // Инвалидируем предыдущие анимации
+          // Сбрасываем предыдущую анимацию
+            resetAllCubes();
+           //выключаем лишние кнопки
+            toggle3.checked = false;
+            toggle3Alt.checked = false;
+            clearTimeout(animationTimeout); //для очищения анимации от других кнопок после выключения 
+            // Запускаем новую анимацию
+        startAnimation('rep2');
+    } else {
+        currentAnimationId++;  // Инвалидируем при выключении
+        // При отключении кнопки сбрасываем анимацию
+        resetAllCubes();
+        clearTimeout(animationTimeout);
+    }
+    updateButtonStates();
+});
+
+    // Обработчик для кнопки "Реплика 3" (3 кубика)
+   toggle3.addEventListener('change', function() {
+    if (this.checked) {
+        currentAnimationId++;
+        resetAllCubes();
+        toggle2.checked = false;
+        toggle3Alt.checked = false;
+        clearTimeout(animationTimeout); 
+        startAnimation('rep3');
+    } else {
+        currentAnimationId++;
+        resetAllCubes();
+    }
+    updateButtonStates();
+});
+
+toggle3Alt.addEventListener('change', function() {
+    if (this.checked) {
+        currentAnimationId++;
+        resetAllCubes();
+        toggle2.checked = false;
+        toggle3.checked = false;
+       clearTimeout(animationTimeout); 
+        startAnimation('ec21');
+    } else {
+        currentAnimationId++;
+        resetAllCubes();
+    }
+    updateButtonStates();
+});
+// Новая функция для анимации импульса
+function animatePulse(from, to, callback) {
+  const pulse = document.createElement('div');
+  pulse.className = 'pulse-effect';
+  document.getElementById('animationContainer').appendChild(pulse);
+
+  // Позиционируем импульс
+  const fromRect = from.getBoundingClientRect();
+  const toRect = to.getBoundingClientRect();
+  const containerRect = document.getElementById('animationContainer').getBoundingClientRect();
+
+  const startX = fromRect.left - containerRect.left + fromRect.width/2;
+  const startY = fromRect.top - containerRect.top + fromRect.height/2;
+  const endX = toRect.left - containerRect.left + toRect.width/2;
+  const endY = toRect.top - containerRect.top + toRect.height/2;
+
+  pulse.style.left = startX + 'px';
+  pulse.style.top = startY + 'px';
+
+  // Анимация
+  pulse.animate([
+        { transform: `translate(0, 0)`, opacity: 1 },
+        { transform: `translate(${endX-startX}px, ${endY-startY}px)`, opacity: 0 }
+    ], {
+        duration: 400,
+        easing: 'ease-in-out'
+    }).onfinish = () => {
+        pulse.remove();
+        if(callback) callback();
+  };
+}
+function startAnimation(mode) {
+  // Сначала анимируем импульсы синхронизации
+    animatePulse(pulseElements.client, pulseElements.commutator, () => {
+        // Импульс к коммутатору
+        animatePulse(pulseElements.commutator, pulseElements.mds2, () => {
+            // Импульсы к MDS серверов 2 и 3
+            animatePulse(pulseElements.commutator, pulseElements.mds3, () => {
+                    // Обратные импульсы
+                animatePulse(pulseElements.mds2, pulseElements.commutator, () => {
+                    animatePulse(pulseElements.mds3, pulseElements.commutator, () => {
+                        animatePulse(pulseElements.commutator, pulseElements.client, startMainAnimation);
+                    });
+            });
+        });
+    });
+});
+
+        // Параллельно импульс к MDS сервера 1 (без коммутатора)
+       animatePulse(pulseElements.client, pulseElements.mds1, () => {
+    animatePulse(pulseElements.mds1, pulseElements.client, () => {});
+});
+    function startMainAnimation() {
+    currentAnimationId++;  // Увеличиваем ID при каждом новом запуске
+    const animationId = currentAnimationId;  // Фиксируем ID для текущей анимации
+    resetAllCubes();
+    const config = animationConfig[mode];
+    let iteration = 0;
+    currentMode = mode;
+
+    const runSequence = () => {
+      // Проверяем, нужно ли продолжать анимацию
+        if (currentAnimationId !== animationId || currentMode !== mode) {
+            return;  // Прерываем если анимация устарела
+        }
+        if (iteration >= 3) {
+            animationTimeout = setTimeout(() => {
+                clearStorage();
+                if (currentMode === mode) startAnimation(mode);
+            }, 1000);
+            return;
+        }
+
+        const { targets, storage, colors } = config.sequences[iteration];
+
+        targets.forEach((cubeIdx, i) => {
+            const storageId = storage[i];
+            const originalCube = cubes[cubeIdx];
+
+            // Создаем новый кубик
+            const newCube = document.createElement('div');
+            newCube.className = `cube cube-${cubeIdx+1}`;
+            newCube.style.backgroundColor = colors ? colors[cubeIdx] : config.colors[cubeIdx];
+            newCube.style.position = 'absolute';
+            newCube.style.width = '12px';
+            newCube.style.height = '12px';
+            newCube.style.borderRadius = '2px';
+            newCube.style.opacity = '0';
+
+            // Позиционируем в начальной точке (как оригинальный кубик)
+            const rect = originalCube.getBoundingClientRect();
+            const containerRect = document.getElementById('animationContainer').getBoundingClientRect();
+            newCube.style.left = (rect.left - containerRect.left) + 'px';
+            newCube.style.top = (rect.top - containerRect.top) + 'px';
+
+            // Добавляем в DOM сразу (до анимации)
+            document.getElementById('animationContainer').appendChild(newCube);
+
+            // Смещение для нового кубика
+            const cubeCount = accumulatedCubes[storageId].length;
+            const offsetY = -cubeCount * 15; // Большее смещение для лучшей видимости
+
+            // Анимация
+            const animation = newCube.animate([
+                { transform: 'translate(0, 0)', opacity: 1 },
+                { transform: `translate(${storageId === 1 ? 0 : 180}px, ${storageId === 1 ? 100 : -140}px)`, opacity: 1 },
+                { transform: `translate(${storageId === 3 ? 385 : storageId === 2 ? 180 : 0}px, ${182 + offsetY}px)`, opacity: 1 }
+            ], {
+                duration: 2000,
+                fill: 'forwards'
+            });
+
+            // Сохраняем кубик
+            accumulatedCubes[storageId].push(newCube);
+        });
+
+        iteration++;
+        setTimeout(runSequence, 2000);
+    };
+
+    runSequence();
+}
+}
+
+//Функция очистки хранилищ
+    function clearStorage() {
+      [1, 2, 3].forEach(storageId => {
+        accumulatedCubes[storageId].forEach(cube => cube.remove());
+        accumulatedCubes[storageId] = [];
+      });
+    }
+
+// Улучшенная функция resetAllCubes
+function resetAllCubes() {
+    clearTimeout(animationTimeout);
+    currentMode = null;
+    // Очищаем все накопленные кубики
+    clearStorage();
+
+    // Сбрасываем основные кубики
+    cubes.forEach(cube => {
+        cube.style.opacity = '0.5';
+        cube.style.transform = 'translate(0, 0)';
+        cube.style.animation = 'none';
+    });
+}
+
+// Функция updateButtonStates остается без изменений
+function updateButtonStates() {
+    document.querySelectorAll('.toggle-button').forEach(btn => {
+        const isActive = 
+            (toggle2.checked && btn.htmlFor === 'animationToggle2') ||
+            (toggle3.checked && btn.htmlFor === 'animationToggle3') ||
+            (toggle3Alt.checked && btn.htmlFor === 'animationToggle3Alt');
+
+        btn.classList.toggle('active', isActive);
+    });
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../diagnostics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4.Проверка">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                4.Проверка
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "navigation.footer"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
